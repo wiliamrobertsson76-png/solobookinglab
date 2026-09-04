@@ -66,3 +66,11 @@
 {"ts":"2026-09-04T16:51:11.054Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (3ms)"}
 {"ts":"2026-09-04T16:51:11.055Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (1ms)"}
 {"ts":"2026-09-04T16:51:11.056Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (1ms)"}
+{"ts":"2026-09-04T16:58:15.823Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:58:15.849Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:58:15.988Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:58:15.989Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (3ms)"}
+{"ts":"2026-09-04T16:58:16.020Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:58:16.020Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (23ms)"}
+{"ts":"2026-09-04T16:58:16.031Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (3ms)"}
+{"ts":"2026-09-04T16:58:16.036Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (2ms)"}
