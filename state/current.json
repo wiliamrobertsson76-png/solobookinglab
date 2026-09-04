@@ -11,9 +11,11 @@
     "affiliate_links_live": 0
   },
   "site": {
-    "status": "built locally, not deployed",
-    "deploy_target": "GitHub Pages via William's new repo",
-    "deploy_url": null
+    "status": "pushed to main; Pages build ran (workflow 'pages build and deployment' success) but URL still 404 as of 2026-09-04 ~16:57 UTC",
+    "deploy_target": "https://cmorewilliam123-arch.github.io/newsletterstack/",
+    "deploy_url": "https://cmorewilliam123-arch.github.io/newsletterstack/",
+    "diagnosis": "Either Pages source folder misconfigured (root instead of /site) or first-publish CDN propagation. driftmotor workflow also ran successfully and committed state update 173e892 to main (unattended motor verified live).",
+    "human_check": "Repo -> Settings -> Pages: what does 'Build and deployment | Source' say? If folder is '/ (root)', change to '/site' and Save. If it already says '/site', wait 10 min and reload."
   },
   "repo": "https://github.com/cmorewilliam123-arch/newsletterstack",
   "pages_base": "https://cmorewilliam123-arch.github.io/newsletterstack",
