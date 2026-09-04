@@ -83,8 +83,8 @@
         "home": "https://systeme.io/",
         "pricing": "https://systeme.io/pricing"
       },
-      "tracking_id": null,
-      "tracking_id_secret_hint": "SYSTEME_AFFILIATE_ID (instant upon free account creation)",
+      "tracking_id": "sa02807287488c417a865e12cf28f57a8bb080b124",
+      "tracking_id_kind": "public affiliate id (appears in published links; not a secret)",
       "disclosure_required": true,
       "commission": {
         "structure": "60% lifetime recurring on every subscription sale",
@@ -96,7 +96,9 @@
       "restrictions": [],
       "verified": "2026-09-04",
       "source": "https://systeme.io/affiliate-program",
-      "status": "awaiting-human-registration"
+      "status": "registered-awaiting-site",
+      "affiliate_link_pattern": "https://systeme.io/?sa=sa02807287488c417a865e12cf28f57a8bb080b124",
+      "note": "ID provided by William from dashboard 2026-09-04; dashboard URL https://systeme.io/sv?sa=<id> also valid"
     },
     {
       "id": "getresponse",

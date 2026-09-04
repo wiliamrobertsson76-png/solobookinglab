@@ -19,7 +19,7 @@ Use your real identity and the live site URL
 (`https://<username>.github.io/newsletterstack/`). Never state fake traffic numbers.
 | Program | Signup page | Cost | Notes |
 |---|---|---|---|
-| Systeme.io | https://systeme.io/affiliate-program | Free, no application | Instant affiliate ID after creating a free account |
+| ~~Systeme.io~~ | ~~https://systeme.io/affiliate-program~~ | Free | **DONE 2026-09-04** — ID registered by agent |
 | Kit | https://kit.com/affiliate | Free, application | Content site approval; mention the calculator + guides |
 | beehiiv | https://www.beehiiv.com/partners | Free, application | Same: real site, real description |
 | MailerLite | https://www.mailerlite.com/affiliate | Free, application | Same |

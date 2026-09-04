@@ -33,7 +33,7 @@ export function runSiteQa() {
     }
     if (!/rel="sponsored"/i.test(html)) {
       // fine for now: no affiliate links live. The day one appears without rel=sponsored it must fail.
-      if (/href="https?:\/\/(?!williamrobertsson\.github\.io)[^"]+"/i.test(html)) {
+      if (/href="https?:\/\/(?!cmorewilliam123-arch\.github\.io)[^"]+"/i.test(html)) {
         // outbound links exist; none are affiliate yet, so this is informational only
       }
     }

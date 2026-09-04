@@ -15,12 +15,24 @@
     "deploy_target": "GitHub Pages via William's new repo",
     "deploy_url": null
   },
+  "repo": "https://github.com/cmorewilliam123-arch/newsletterstack",
+  "pages_base": "https://cmorewilliam123-arch.github.io/newsletterstack",
+  "affiliate_registrations": {
+    "systeme_io": {
+      "status": "registered",
+      "id_registered": true,
+      "id_source": "William pasted dashboard affiliate ID 2026-09-04"
+    },
+    "kit": "awaiting site live",
+    "beehiiv": "awaiting site live",
+    "mailerlite": "awaiting site live"
+  },
   "human_blockers": [
     {
       "id": "B1",
-      "title": "Create empty public GitHub repo 'newsletterstack' (see docs/INSTALL_CHECKLIST.md item 1)",
-      "why": "Deployment + unattended driftmotor run there",
-      "needed_from_william": "Repo URL; confirm Pages enabled after agent push"
+      "title": "Confirm GitHub Pages + Actions after agent push",
+      "why": "Agent cannot flip repo settings remotely",
+      "needed_from_william": "Repo -> Settings -> Pages -> Source: Deploy from branch, main, /site folder; then confirm Actions tab shows the driftmotor workflow"
     },
     {
       "id": "B2",
@@ -35,6 +47,6 @@
       "needed_from_william": "Explicit approval or 'skip - use github.io'"
     }
   ],
-  "next_exact_run_point": "Top unblocked task: BL-3 (draft the 3 launch articles from registry data, pass content gate). Then BL-4, BL-5. Do not re-plan; verify with 'node engine/tests/run-all.mjs' after changes.",
+  "next_exact_run_point": "Top unblocked task: BL-3 (draft the 3 launch articles from registry data, pass content gate). Then BL-4, BL-5. Do not re-plan; verify with 'node engine/tests/run-all.mjs' after changes. After William confirms Pages: validate live site + recheck Systeme.io test link.",
   "session_protocol": "Read knowledge.md first. Update this file, backlog, logs at session end."
 }

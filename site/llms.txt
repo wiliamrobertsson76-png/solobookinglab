@@ -7,17 +7,17 @@ Publisher: William Robertsson (individual), Sweden. No cookies, no analytics, no
 
 ## Tools
 
-- [Cost & affiliate earnings calculator](https://williamrobertsson.github.io/newsletterstack/calculator.html):
+- [Cost & affiliate earnings calculator](https://cmorewilliam123-arch.github.io/newsletterstack/calculator.html):
   compares Kit, beehiiv, MailerLite and Systeme.io at a given subscriber count; models affiliate
   earnings from explicit user-entered assumptions. All data date-stamped with primary sources.
 
 ## Reference pages
 
-- [Editorial method & verification policy](https://williamrobertsson.github.io/newsletterstack/method.html):
+- [Editorial method & verification policy](https://cmorewilliam123-arch.github.io/newsletterstack/method.html):
   primary-source-only policy, verification dates, corrections process.
-- [About](https://williamrobertsson.github.io/newsletterstack/about.html): who runs the site and how it is funded.
-- [Privacy](https://williamrobertsson.github.io/newsletterstack/privacy.html): no cookies, no tracking.
-- [Terms](https://williamrobertsson.github.io/newsletterstack/terms.html): information, not advice.
+- [About](https://cmorewilliam123-arch.github.io/newsletterstack/about.html): who runs the site and how it is funded.
+- [Privacy](https://cmorewilliam123-arch.github.io/newsletterstack/privacy.html): no cookies, no tracking.
+- [Terms](https://cmorewilliam123-arch.github.io/newsletterstack/terms.html): information, not advice.
 
 ## Data verification
 

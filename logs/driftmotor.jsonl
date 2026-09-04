@@ -1,0 +1,54 @@
+{"ts":"2026-09-04T16:16:34.424Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:16:34.488Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: external/third-party <script src> found (only local calculator.js allowed); about.html: broken internal link -> https://williamrobertsson.github.io/newsletterstack/about.html; calculator.html: broken internal link -> https://williamrobertsson.github.io/newsletterstack/calculator.html; contact.html: broken internal link -> https://williamrobertsson.github.io/newsletterstack/contact.html; method.html: broken internal link -> https://williamrobertsson.github.io/newsletterstack/method.html; privacy.html: broken internal link -> https://williamrobertsson.github.io/newsletterstack/privacy.html; terms.html: broken internal link -> https://williamrobertsson.github.io/newsletterstack/terms.html"}
+{"ts":"2026-09-04T16:17:07.484Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:17:07.549Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:17:37.413Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:17:37.417Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (14ms)"}
+{"ts":"2026-09-04T16:17:38.138Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:17:38.140Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (72ms)"}
+{"ts":"2026-09-04T16:17:38.526Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (19ms)"}
+{"ts":"2026-09-04T16:17:39.044Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (10ms)"}
+{"ts":"2026-09-04T16:18:27.012Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:18:27.079Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:18:27.385Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:18:27.388Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (6ms)"}
+{"ts":"2026-09-04T16:18:27.447Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:18:27.449Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (58ms)"}
+{"ts":"2026-09-04T16:18:27.457Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (6ms)"}
+{"ts":"2026-09-04T16:18:27.463Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (4ms)"}
+{"ts":"2026-09-04T16:18:28.255Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:18:28.260Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (8ms)"}
+{"ts":"2026-09-04T16:18:28.431Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:18:28.433Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (171ms)"}
+{"ts":"2026-09-04T16:18:28.451Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (10ms)"}
+{"ts":"2026-09-04T16:18:28.488Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (8ms)"}
+{"ts":"2026-09-04T16:18:46.963Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:18:46.967Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (5ms)"}
+{"ts":"2026-09-04T16:18:59.923Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:18:59.925Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (5ms)"}
+{"ts":"2026-09-04T16:19:00.215Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:19:00.218Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (6ms)"}
+{"ts":"2026-09-04T16:19:00.490Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:19:00.493Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (5ms)"}
+{"ts":"2026-09-04T16:19:25.894Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:19:25.896Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (4ms)"}
+{"ts":"2026-09-04T16:19:25.933Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:19:25.933Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (31ms)"}
+{"ts":"2026-09-04T16:19:25.942Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (4ms)"}
+{"ts":"2026-09-04T16:19:25.953Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (3ms)"}
+{"ts":"2026-09-04T16:19:26.383Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:19:26.423Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:19:26.657Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:19:26.659Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (5ms)"}
+{"ts":"2026-09-04T16:19:26.705Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:19:26.706Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (39ms)"}
+{"ts":"2026-09-04T16:19:26.719Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (4ms)"}
+{"ts":"2026-09-04T16:19:26.728Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (2ms)"}
+{"ts":"2026-09-04T16:39:29.049Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:39:29.095Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:39:29.303Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-04T16:39:29.306Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (4ms)"}
+{"ts":"2026-09-04T16:39:29.351Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-04T16:39:29.352Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (38ms)"}
+{"ts":"2026-09-04T16:39:29.366Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (5ms)"}
+{"ts":"2026-09-04T16:39:29.378Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (3ms)"}

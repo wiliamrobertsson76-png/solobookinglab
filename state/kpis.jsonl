@@ -19,3 +19,6 @@
 {"ts":"2026-09-04T16:19:26.716Z","kpi":"registry_programs_tracked","value":6}
 {"ts":"2026-09-04T16:19:26.717Z","kpi":"programs_live","value":0}
 {"ts":"2026-09-04T16:19:26.718Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-04T16:39:29.363Z","kpi":"registry_programs_tracked","value":6}
+{"ts":"2026-09-04T16:39:29.364Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-04T16:39:29.365Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
