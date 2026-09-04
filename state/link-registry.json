@@ -1,0 +1,143 @@
+{
+  "updated": "2026-09-04",
+  "recheck_interval_days": 90,
+  "programs": [
+    {
+      "id": "kit",
+      "name": "Kit (ConvertKit)",
+      "category": "newsletter/email platform",
+      "signup_url": "https://kit.com/affiliate",
+      "destinations": {
+        "home": "https://kit.com/",
+        "pricing": "https://kit.com/pricing"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "KIT_AFFILIATE_ID (GitHub Secret; William adds after approval)",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "50% of referred customer payments during customer's first 12 months",
+        "recurring_after_year_1": "10% (Bronze) / 15% (Silver) / 20% (Gold) indefinitely, requires 10/50/100 paying referrals per year; PPC referrals do not count toward tier status",
+        "cookie_days": null,
+        "cookie_note": "not stated on program page as of 2026-09-04; confirm in dashboard after approval"
+      },
+      "payout": {"min_usd": null, "note": "confirm in dashboard after approval"},
+      "restrictions": ["no self-signups via own link", "PPC referrals excluded from tier qualification"],
+      "verified": "2026-09-04",
+      "source": "https://kit.com/affiliate",
+      "status": "awaiting-human-registration"
+    },
+    {
+      "id": "beehiiv",
+      "name": "beehiiv",
+      "category": "newsletter platform",
+      "signup_url": "https://www.beehiiv.com/partners",
+      "destinations": {
+        "home": "https://www.beehiiv.com/",
+        "pricing": "https://www.beehiiv.com/pricing"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "BEEHIIV_PARTNER_ID",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "50% of referred revenue for year one at Bronze tier; 55% Silver; 60% Gold; tiers by lifetime paying conversions",
+        "recurring_after_year_1": null,
+        "cookie_days": 60,
+        "attribution": "first-click"
+      },
+      "payout": {"min_usd": null, "note": "paid on 15th monthly via PayPal"},
+      "restrictions": ["brand-term search ads on Google/Bing prohibited", "no paid traffic planned by us anyway", "no self-signups via own link"],
+      "verified": "2026-09-04",
+      "source": "https://www.beehiiv.com/partners",
+      "status": "awaiting-human-registration"
+    },
+    {
+      "id": "mailerlite",
+      "name": "MailerLite",
+      "category": "email marketing platform",
+      "signup_url": "https://www.mailerlite.com/affiliate",
+      "destinations": {
+        "home": "https://www.mailerlite.com/",
+        "pricing": "https://www.mailerlite.com/pricing"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "MAILERLITE_AFFILIATE_ID",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "30% lifetime recurring on every payment",
+        "recurring_after_year_1": "30% lifetime",
+        "cookie_days": 45,
+        "attribution": "cookie-based"
+      },
+      "payout": {"min_usd": 100, "note": "min $100 from >=2 unique referrals; 30-day refund hold; Friday settlements; USD only"},
+      "restrictions": ["USD payouts only (FX fees apply for SEK)"],
+      "verified": "2026-09-04",
+      "source": "https://www.mailerlite.com/affiliate",
+      "status": "awaiting-human-registration"
+    },
+    {
+      "id": "systeme_io",
+      "name": "Systeme.io",
+      "category": "all-in-one funnel/email platform",
+      "signup_url": "https://systeme.io/affiliate-program",
+      "destinations": {
+        "home": "https://systeme.io/",
+        "pricing": "https://systeme.io/pricing"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "SYSTEME_AFFILIATE_ID (instant upon free account creation)",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "60% lifetime recurring on every subscription sale",
+        "recurring_after_year_1": "60% lifetime",
+        "cookie_days": null,
+        "attribution": "lifetime last-cookie tagging"
+      },
+      "payout": {"min_usd": 30, "note": "payouts processed on the 10th monthly; PayPal or wire"},
+      "restrictions": [],
+      "verified": "2026-09-04",
+      "source": "https://systeme.io/affiliate-program",
+      "status": "awaiting-human-registration"
+    },
+    {
+      "id": "getresponse",
+      "name": "GetResponse",
+      "category": "email marketing platform",
+      "signup_url": "https://www.getresponse.com/affiliate-programs",
+      "destinations": {
+        "home": "https://www.getresponse.com/",
+        "pricing": "https://www.getresponse.com/pricing"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "GETRESPONSE_AFFILIATE_ID",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "Bounty program or recurring program; recurring rate depends on signup date (33% documented in legal terms for some cohorts)",
+        "recurring_after_year_1": null,
+        "cookie_days": 120,
+        "attribution": "cookie-based (per affiliate page FAQ)"
+      },
+      "payout": {"min_usd": null, "note": "recurring paid ~20th monthly for prior month verified sales"},
+      "restrictions": ["must confirm current cohort rate in dashboard after signup"],
+      "verified": "2026-09-04",
+      "source": "https://www.getresponse.com/legal/affiliate-program",
+      "status": "awaiting-human-registration"
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "category": "productivity",
+      "signup_url": "https://www.notion.com/affiliates",
+      "destinations": {"home": "https://www.notion.com/"},
+      "tracking_id": null,
+      "disclosure_required": true,
+      "commission": {"structure": "$50 per activated signup + 20% of year-one revenue (historic terms)", "cookie_days": null},
+      "payout": {},
+      "restrictions": ["PROGRAM CLOSED to new affiliates as of 2026-09-04"],
+      "verified": "2026-09-04",
+      "source": "https://www.notion.com/affiliates",
+      "status": "closed-do-not-register"
+    }
+  ],
+  "published_affiliate_links": [],
+  "notes": "No affiliate URL may be used in published content until: (1) William registered, (2) tracking ID stored as GitHub Secret + registered here, (3) link validator confirms the generated URL resolves correctly. Test links use the harmless pattern specified by each program."
+}

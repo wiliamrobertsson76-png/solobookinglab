@@ -1,0 +1,7 @@
+Kill switch: to immediately stop all driftmotor actions (publishing, external calls,
+scheduled commits), create an empty file named exactly:
+
+    state/KILL
+
+Every motor job checks for this file before doing anything, and the GitHub Actions
+workflow aborts before running anything if it exists. Remove the file to resume.

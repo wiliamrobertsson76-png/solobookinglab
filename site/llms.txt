@@ -1,0 +1,25 @@
+# NewsletterStack
+
+Verified, date-stamped information and free tools for newsletter creators:
+platform cost comparison, affiliate program terms decoded, and migration guides.
+
+Publisher: William Robertsson (individual), Sweden. No cookies, no analytics, no tracking.
+
+## Tools
+
+- [Cost & affiliate earnings calculator](https://williamrobertsson.github.io/newsletterstack/calculator.html):
+  compares Kit, beehiiv, MailerLite and Systeme.io at a given subscriber count; models affiliate
+  earnings from explicit user-entered assumptions. All data date-stamped with primary sources.
+
+## Reference pages
+
+- [Editorial method & verification policy](https://williamrobertsson.github.io/newsletterstack/method.html):
+  primary-source-only policy, verification dates, corrections process.
+- [About](https://williamrobertsson.github.io/newsletterstack/about.html): who runs the site and how it is funded.
+- [Privacy](https://williamrobertsson.github.io/newsletterstack/privacy.html): no cookies, no tracking.
+- [Terms](https://williamrobertsson.github.io/newsletterstack/terms.html): information, not advice.
+
+## Data verification
+
+Volatile facts (prices, commission terms, plan limits) are verified against vendor primary pages
+and re-checked quarterly. Current verification date: 2026-09-04.

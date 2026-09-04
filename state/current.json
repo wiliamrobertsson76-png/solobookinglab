@@ -1,0 +1,40 @@
+{
+  "project": "NewsletterStack (autonom-affiliate)",
+  "owner": "William Robertsson",
+  "updated": "2026-09-04",
+  "phase": "awaiting-human-setup + content-production",
+  "niche": "newsletter/email platform choice, migration and monetization for creators",
+  "verified_state": {
+    "tests": "4/4 passing (node engine/tests/run-all.mjs)",
+    "driftmotor": "runs green locally; queue idempotent; kill switch verified",
+    "site": "7 pages + calculator built locally; site QA passes; NOT deployed",
+    "affiliate_links_live": 0
+  },
+  "site": {
+    "status": "built locally, not deployed",
+    "deploy_target": "GitHub Pages via William's new repo",
+    "deploy_url": null
+  },
+  "human_blockers": [
+    {
+      "id": "B1",
+      "title": "Create empty public GitHub repo 'newsletterstack' (see docs/INSTALL_CHECKLIST.md item 1)",
+      "why": "Deployment + unattended driftmotor run there",
+      "needed_from_william": "Repo URL; confirm Pages enabled after agent push"
+    },
+    {
+      "id": "B2",
+      "title": "Register affiliate programs AFTER site is live (checklist item 2)",
+      "why": "Tracking IDs required before any affiliate link goes live; applications must be truthful and human-made",
+      "needed_from_william": "Tracking IDs (not secret; can be shared in chat) or secret NAMES for real secrets"
+    },
+    {
+      "id": "B3",
+      "title": "Optional domain purchase (~120 SEK/yr) or 'skip'",
+      "why": "Cost decision requires explicit approval with amount and purpose",
+      "needed_from_william": "Explicit approval or 'skip - use github.io'"
+    }
+  ],
+  "next_exact_run_point": "Top unblocked task: BL-3 (draft the 3 launch articles from registry data, pass content gate). Then BL-4, BL-5. Do not re-plan; verify with 'node engine/tests/run-all.mjs' after changes.",
+  "session_protocol": "Read knowledge.md first. Update this file, backlog, logs at session end."
+}

@@ -1,0 +1,75 @@
+{
+  "updated": "2026-09-04",
+  "tasks": [
+    {
+      "id": "BL-1",
+      "title": "Deploy site to GitHub Pages (agent pushes once repo exists; William flips Pages setting)",
+      "priority": 95,
+      "expected_revenue_impact": "high (prerequisite for everything user-facing)",
+      "risk": "low",
+      "cost_sek": 0,
+      "status": "blocked-by-human",
+      "blocker": "B1",
+      "notes": "site + workflow ready and tested locally"
+    },
+    {
+      "id": "BL-2",
+      "title": "Connect affiliate IDs and validate real tracking links",
+      "priority": 90,
+      "expected_revenue_impact": "high (enables monetization)",
+      "risk": "low",
+      "cost_sek": 0,
+      "status": "blocked-by-human",
+      "blocker": "B2",
+      "notes": "validator + registry ready; IDs arrive only after site is live and William registers"
+    },
+    {
+      "id": "BL-3",
+      "title": "Draft 3 launch articles: platform comparison (free tier limits), first-1000-subs cost guide, affiliate-program earning guide",
+      "priority": 85,
+      "expected_revenue_impact": "high",
+      "risk": "low",
+      "cost_sek": 0,
+      "status": "ready",
+      "notes": "use only verified facts from link-registry.json with verified-dates; content gate applies"
+    },
+    {
+      "id": "BL-4",
+      "title": "Build migration checklist pages (Kit<->beehiiv<->MailerLite)",
+      "priority": 70,
+      "expected_revenue_impact": "medium-high (differentiator)",
+      "risk": "low",
+      "cost_sek": 0,
+      "status": "ready"
+    },
+    {
+      "id": "BL-5",
+      "title": "Wire Search Console / Bing Webmaster via approved methods once site is live",
+      "priority": 65,
+      "expected_revenue_impact": "medium (measurement)",
+      "risk": "low",
+      "cost_sek": 0,
+      "status": "blocked-by-human",
+      "blocker": "B1"
+    },
+    {
+      "id": "BL-6",
+      "title": "Quarterly re-verification of all affiliate terms + pricing entries",
+      "priority": 80,
+      "expected_revenue_impact": "protective (compliance)",
+      "risk": "low",
+      "cost_sek": 0,
+      "status": "scheduled",
+      "due": "2026-12-03"
+    },
+    {
+      "id": "BL-8",
+      "title": "Email newsletter (only after documented-consent infrastructure exists)",
+      "priority": 40,
+      "expected_revenue_impact": "medium",
+      "risk": "medium (GDPR consent flows must be built first)",
+      "cost_sek": 0,
+      "status": "deferred"
+    }
+  ]
+}

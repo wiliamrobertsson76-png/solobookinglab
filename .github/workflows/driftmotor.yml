@@ -1,0 +1,49 @@
+# Autonomous driftmotor — runs unattended on GitHub Actions (free tier for public repos).
+# Human-started Freebuff sessions are separate; this motor never touches Freebuff.
+# Cost guards: workflow timeout, no secrets in logs, kill switch respected inside the job.
+name: driftmotor
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # daily 04:17 UTC
+  workflow_dispatch: {}     # manual trigger
+
+permissions:
+  contents: write          # needed to commit state updates
+
+concurrency:
+  group: driftmotor
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Kill-switch check
+        run: |
+          if [ -f state/KILL ]; then
+            echo "KILL SWITCH ACTIVE - aborting run"; exit 1
+          fi
+
+      - name: Run tests + driftmotor
+        env:
+          DM_VERBOSE: "1"
+        run: |
+          node engine/tests/run-all.mjs
+          node engine/jobs/run.mjs all
+
+      - name: Commit state updates
+        run: |
+          git config user.name "newsletterstack-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/ logs/ || true
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "driftmotor: scheduled state update [skip ci]"
+          git push

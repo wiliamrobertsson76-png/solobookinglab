@@ -1,0 +1,21 @@
+{"ts": "2026-09-04T00:00:00Z", "kpi": "indexed_pages", "value": 0, "note": "site not deployed yet"}
+{"ts": "2026-09-04T00:00:00Z", "kpi": "organic_impressions", "value": 0, "note": "no Search Console access yet"}
+{"ts": "2026-09-04T00:00:00Z", "kpi": "affiliate_clicks", "value": 0, "note": "no affiliate links live"}
+{"ts": "2026-09-04T00:00:00Z", "kpi": "revenue_sek", "value": 0, "note": "baseline; no tracking accounts active"}
+{"ts": "2026-09-04T00:00:00Z", "kpi": "cost_sek", "value": 0, "note": "hard budget rule"}
+{"ts": "2026-09-04T00:00:00Z", "kpi": "verified_facts_in_registry", "value": 8, "note": "primary-source verified entries"}
+{"ts":"2026-09-04T16:17:38.511Z","kpi":"registry_programs_tracked","value":6}
+{"ts":"2026-09-04T16:17:38.520Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-04T16:17:38.522Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-04T16:18:27.452Z","kpi":"registry_programs_tracked","value":6}
+{"ts":"2026-09-04T16:18:27.453Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-04T16:18:27.455Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-04T16:18:28.442Z","kpi":"registry_programs_tracked","value":6}
+{"ts":"2026-09-04T16:18:28.443Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-04T16:18:28.444Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-04T16:19:25.940Z","kpi":"registry_programs_tracked","value":6}
+{"ts":"2026-09-04T16:19:25.940Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-04T16:19:25.941Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-04T16:19:26.716Z","kpi":"registry_programs_tracked","value":6}
+{"ts":"2026-09-04T16:19:26.717Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-04T16:19:26.718Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
