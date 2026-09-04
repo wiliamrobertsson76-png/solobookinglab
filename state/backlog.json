@@ -3,14 +3,13 @@
   "tasks": [
     {
       "id": "BL-1",
-      "title": "Deploy site to GitHub Pages (agent pushes once repo exists; William flips Pages setting)",
+      "title": "Deploy site to GitHub Pages",
       "priority": 95,
       "expected_revenue_impact": "high (prerequisite for everything user-facing)",
       "risk": "low",
       "cost_sek": 0,
-      "status": "blocked-by-human",
-      "blocker": "B1",
-      "notes": "site + workflow ready and tested locally"
+      "status": "done",
+      "notes": "LIVE 2026-09-04 at https://wiliamrobertsson76-png.github.io/newsletterstack/ - all 10 pages verified 200; fully automated deploy workflow"
     },
     {
       "id": "BL-2",
