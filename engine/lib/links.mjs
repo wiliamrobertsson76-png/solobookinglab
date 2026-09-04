@@ -56,6 +56,11 @@ const ALLOWED_OUTBOUND = [
   "systeme.io",
   "www.getresponse.com",
   "getresponse.com",
+  "www.aweber.com",
+  "aweber.com",
+  "www.pabbly.com",
+  "pabbly.com",
+  "selzy.com",
   "www.notion.com",
   "notion.com"
 ];

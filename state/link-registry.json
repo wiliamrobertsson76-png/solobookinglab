@@ -110,19 +110,94 @@
         "pricing": "https://www.getresponse.com/pricing"
       },
       "tracking_id": null,
-      "tracking_id_secret_hint": "GETRESPONSE_AFFILIATE_ID",
+      "tracking_id_secret_hint": "GETRESPONSE_PARTNERSTACK_ID",
       "disclosure_required": true,
       "commission": {
-        "structure": "Bounty program or recurring program; recurring rate depends on signup date (33% documented in legal terms for some cohorts)",
+        "structure": "Recurring program: 40% of referred customer's payment each month for 12 months; 50% after 50 sales in 12 months; 60% after 100+ sales (verified on program page 2026-09-04)",
         "recurring_after_year_1": null,
-        "cookie_days": 120,
-        "attribution": "cookie-based (per affiliate page FAQ)"
+        "cookie_days": null,
+        "cookie_note": "not stated on primary page; third-party sources claim 120d - confirm in dashboard",
+        "access": "self-serve registration via PartnerStack - instant, no approval queue"
       },
-      "payout": {"min_usd": null, "note": "recurring paid ~20th monthly for prior month verified sales"},
-      "restrictions": ["must confirm current cohort rate in dashboard after signup"],
+      "payout": {"min_usd": null, "note": "recurring paid ~20th monthly for prior month verified sales (per GetResponse help)"},
+      "restrictions": ["confirm current cohort terms in PartnerStack after signup"],
       "verified": "2026-09-04",
-      "source": "https://www.getresponse.com/legal/affiliate-program",
-      "status": "awaiting-human-registration"
+      "source": "https://www.getresponse.com/affiliate-programs",
+      "status": "instant-signup-available"
+    },
+    {
+      "id": "aweber",
+      "name": "AWeber",
+      "category": "email marketing platform",
+      "signup_url": "https://www.aweber.com/advocates.htm",
+      "destinations": {
+        "home": "https://www.aweber.com/",
+        "pricing": "https://www.aweber.com/pricing"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "AWEBER_ADVOCATE_ID",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "30% recurring for lifetime of paid accounts (0-99 referred paid accounts/trailing 12mo); 40% at 100-499; 50% at 500+ (verified on program page 2026-09-04)",
+        "recurring_after_year_1": "30-50% lifetime, tiered",
+        "cookie_days": null,
+        "cookie_note": "not stated on primary page; third-party sources claim 365d - confirm in dashboard",
+        "access": "free self-serve Advocate account - instant"
+      },
+      "payout": {"min_usd": null, "note": "confirm in advocate dashboard after signup"},
+      "restrictions": [],
+      "verified": "2026-09-04",
+      "source": "https://www.aweber.com/advocates.htm",
+      "status": "instant-signup-available"
+    },
+    {
+      "id": "pabbly",
+      "name": "Pabbly",
+      "category": "email marketing / automation platform",
+      "signup_url": "https://www.pabbly.com/affiliates/",
+      "destinations": {
+        "home": "https://www.pabbly.com/",
+        "pricing": "https://www.pabbly.com/email-marketing/"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "PABBLY_AFFILIATE_ID",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "30% recurring forever on every recurring sale (verified on program page 2026-09-04)",
+        "recurring_after_year_1": "30% lifetime",
+        "cookie_days": 365,
+        "access": "free self-serve signup - instant, anyone can join"
+      },
+      "payout": {"min_usd": null, "note": "monthly via PayPal; no cash-out limit (per program page)"},
+      "restrictions": [],
+      "verified": "2026-09-04",
+      "source": "https://www.pabbly.com/affiliates/",
+      "status": "instant-signup-available"
+    },
+    {
+      "id": "selzy",
+      "name": "Selzy",
+      "category": "email marketing platform",
+      "signup_url": "https://selzy.com/en/partners/affiliate-program/",
+      "destinations": {
+        "home": "https://selzy.com/",
+        "pricing": "https://selzy.com/en/pricing/"
+      },
+      "tracking_id": null,
+      "tracking_id_secret_hint": "SELZY_AFFILIATE_ID",
+      "disclosure_required": true,
+      "commission": {
+        "structure": "40% commission on every purchase referrals make during their first year (verified on program page 2026-09-04)",
+        "recurring_after_year_1": null,
+        "cookie_days": null,
+        "cookie_note": "not stated on primary page; third-party sources claim 365d - confirm in dashboard",
+        "access": "free self-serve signup in minutes - instant"
+      },
+      "payout": {"min_usd": null, "note": "confirm in dashboard after signup"},
+      "restrictions": [],
+      "verified": "2026-09-04",
+      "source": "https://selzy.com/en/partners/affiliate-program/",
+      "status": "instant-signup-available"
     },
     {
       "id": "notion",

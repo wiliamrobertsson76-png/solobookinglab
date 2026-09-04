@@ -14,12 +14,28 @@ While you do these, the agent continues with unblocked work (content drafting, Q
 The agent will push the site + driftmotor and enable GitHub Pages (Settings → Pages →
 Deploy from branch → main → /site folder or via Actions). You confirm the Pages setting once.
 
-## 2. Register affiliate programs (only AFTER the site is live)
+## 2. Register affiliate programs — INSTANT ones first (no application, no waiting)
 Use your real identity and the live site URL
-(`https://<username>.github.io/newsletterstack/`). Never state fake traffic numbers.
-| Program | Signup page | Cost | Notes |
+(`https://wiliamrobertsson76-png.github.io/newsletterstack/`). Never state fake traffic numbers.
+
+**Spår A — direkt (5–10 min totalt, ID direkt):**
+| Program | Signup page | Provision | Notes |
 |---|---|---|---|
-| ~~Systeme.io~~ | ~~https://systeme.io/affiliate-program~~ | Free | **DONE 2026-09-04** — ID registered by agent |
+| ~~Systeme.io~~ | — | 60% livstid | **KLART 2026-09-04** — ID registrerat |
+| GetResponse | https://www.getresponse.com/affiliate-programs | 40% månad 1–12 | Via PartnerStack, konto = ID direkt |
+| AWeber | https://www.aweber.com/advocates.htm | 30% livstid (→50%) | Gratis Advocate-konto, direkt |
+| Pabbly | https://www.pabbly.com/affiliates/ | 30% livstid, 365d cookie | Direkt, "alla kan gå med" |
+| Selzy | https://selzy.com/en/partners/affiliate-program/ | 40% år 1 | Direkt på minuter |
+
+Efter varje registrering: kopiera affiliate-ID:t / länken och klistra in den i chatten till agenten
+(ID:t är inte hemligt — det syns i publicerade länkar). ALDRIG lösenord eller API-nycklar.
+
+**Spår B — ansökan krävs (skicka in, fortsätt arbetsa medan du väntar):**
+| Program | Provision | Varför väntan är värd det |
+|---|---|---|
+| Kit | 50% år 1 | Högsta provisionen i nischen |
+| beehiiv | 50–60% år 1 | Stark varumärkesdrift i nichen |
+| MailerLite | 30% livstid | Bra mellanalternativ, lång cookie (45d) |
 | Kit | https://kit.com/affiliate | Free, application | Content site approval; mention the calculator + guides |
 | beehiiv | https://www.beehiiv.com/partners | Free, application | Same: real site, real description |
 | MailerLite | https://www.mailerlite.com/affiliate | Free, application | Same |
