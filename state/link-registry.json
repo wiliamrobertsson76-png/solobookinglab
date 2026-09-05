@@ -1,7 +1,7 @@
 {
   "updated": "2026-09-05",
   "recheck_interval_days": 90,
-  "note": "PIVOT 2026-09-05: booking stack decision support. Old newsletter programs below are archived-pivoted. New tool entries carry verification labels. Affiliate registration order is owner-mandated: SimplyBook.me -> Jotform+Formaloo -> Trafft (when site quality suffices) -> Make/Pabbly only for automation guides.",
+  "note": "PIVOT 2026-09-05: booking stack decision support. Old newsletter programs below are archived-pivoted. New tool entries carry verification labels. Affiliate registration order is owner-mandated: SimplyBook.me -> Jotform+Formaloo -> Trafft (when site quality suffices) -> Make/Pabbly only for automation guides. WAVE 2 2026-09-05: instant-access programs researched and added (Bonsai, Dubsado, Setmore, SimpleTexting, Textline, Sakari, Amelia, Typeform, vcita; HoneyBook/Acuity excluded with reasons).",
   "tools": [
     {
       "id": "simplybook_me",
@@ -110,6 +110,198 @@
         "registered": true,
         "applied_date": "2026-09-05"
       },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "bonsai",
+      "name": "Bonsai",
+      "role": "service-suite",
+      "pricing_page": "https://www.hellobonsai.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "OPEN SIGNUP: anyone can join, need not be a Bonsai user [vendor 2026-09-05]",
+        "terms": "200% of referral's first monthly payment OR 30% of yearly plan; 60-day cookie; monthly payouts [vendor 2026-09-05]",
+        "signup_url": "https://www.hellobonsai.com/affiliates",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "suite: scheduling + invoices + forms + client portal; strong fit for solo service businesses",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "dubsado",
+      "name": "Dubsado",
+      "role": "service-suite",
+      "pricing_page": "https://www.dubsado.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "OPEN SIGNUP: open to anyone, free-trial account is enough to generate an affiliate code [vendor 2026-09-05]",
+        "terms": "$35 per referral after referral retains paid status 60 days; referral gets 20% off first month/year; NO cookie time limit [vendor 2026-09-05]",
+        "signup_url": "https://www.dubsado.com/affiliate-program",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "CRM + scheduling + forms + contracts for service businesses; strong fit",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "setmore",
+      "name": "Setmore",
+      "role": "scheduler",
+      "pricing_page": "https://www.setmore.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "free up to 4 users / 200 bookings per month; Pro beyond [third-party 2026-09-05]",
+      "affiliate": {
+        "available": true,
+        "status": "signup via Tapfiliate form (setmore.tapfiliate.com); friction likely low - verify at signup [vendor+third-party 2026-09-05]",
+        "terms": "30% ongoing per Pro account [third-party 2026-09-05] - verify exact terms at signup",
+        "signup_url": "https://setmore.tapfiliate.com/",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "scheduler with free plan; direct niche fit",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "simpletexting",
+      "name": "SimpleTexting",
+      "role": "sms-reminders",
+      "pricing_page": "https://simpletexting.com/pricing/",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "from ~$29-39/mo for 500 credits [third-party 2026-09-05]",
+      "affiliate": {
+        "available": true,
+        "status": "program page live; application form [vendor 2026-09-05]",
+        "terms": "10% of referral's monthly payment [vendor 2026-09-05]",
+        "signup_url": "https://simpletexting.com/partnership/sms-affiliate/",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "SMS appointment reminders - reminders leg of the booking stack",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "textline",
+      "name": "Textline",
+      "role": "sms-reminders",
+      "pricing_page": "https://www.textline.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "program page live [vendor 2026-09-05]",
+        "terms": "20% commission on referrals [vendor 2026-09-05]",
+        "signup_url": "https://www.textline.com/partners/affiliates",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "business SMS - reminders leg",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "sakari",
+      "name": "Sakari",
+      "role": "sms-reminders",
+      "pricing_page": "https://sakari.io/pricing/",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "affiliate link issued upon joining per partners page [vendor 2026-09-05]",
+        "terms": "10% of eligible sales monthly for first 12 months of each referred customer [vendor 2026-09-05]",
+        "signup_url": "https://sakari.io/partners",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "SMS automation/reminders leg",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "amelia",
+      "name": "Amelia (WordPress booking plugin)",
+      "role": "scheduler-wordpress",
+      "pricing_page": "https://wpamelia.com/pricing/",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "official program page; signup form [vendor 2026-09-05]",
+        "terms": "30% commission on every sale; monthly payouts; real-time tracking [vendor 2026-09-05]",
+        "signup_url": "https://wpamelia.com/documentation/affiliate-program/",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "WordPress booking plugin - relevant for readers building on WP; lower priority for github.io audience",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "typeform",
+      "name": "Typeform",
+      "role": "intake-addon",
+      "pricing_page": "https://www.typeform.com/pricing/",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "runs on PartnerStack; approval step expected [third-party 2026-09-05]",
+        "terms": "tiered 10/15/20% of subscription purchases first year [third-party 2026-09-05] - verify in marketplace listing",
+        "signup_url": "https://market.partnerstack.com/",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "premium intake forms; approval friction - lower priority than open programs",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "vcita",
+      "name": "vcita",
+      "role": "service-suite",
+      "pricing_page": "https://www.vcita.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "partner program is reseller-oriented (inTandem by vcita); affiliate listing is third-party only [2026-09-05]",
+        "terms": "20% one-time per new customer [third-party 2026-09-05] - verify before applying",
+        "signup_url": "https://www.vcita.com/partners",
+        "tracking_id": null,
+        "registered": false
+      },
+      "fit_note": "scheduling+CRM+invoicing for SMBs - great fit IF program accessible; verify first",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "honeybook",
+      "name": "HoneyBook",
+      "role": "service-suite",
+      "pricing_page": "https://www.honeybook.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "not yet fetched",
+      "affiliate": {
+        "available": false,
+        "status": "no open affiliate program found 2026-09-05; member-referral only (must be paying subscriber; payout after referred friend subscribes 100+ business days) [vendor 2026-09-05]",
+        "terms": "member referral: up to ~$200 per qualifying friend [vendor+third-party 2026-09-05]"
+      },
+      "fit_note": "excluded for now: participation requires paying for HoneyBook ourselves",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "acuity",
+      "name": "Acuity Scheduling",
+      "role": "scheduler",
+      "pricing_page": "https://www.acuityscheduling.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "pricing_summary": "no free plan; Starter ~$16-20/mo [third-party 2026-09-05]",
+      "affiliate": {
+        "available": false,
+        "status": "standalone referral program CLOSED to new partners (payouts continue to 2026-09-17) [vendor 2026-09-05]; Squarespace affiliate program covers Acuity subscriptions (~$45-200 per sale) but requires Squarespace application [third-party 2026-09-05]",
+        "signup_url": "https://www.squarespace.com/affiliates"
+      },
+      "fit_note": "revisit only if we later apply to Squarespace's program",
       "own_test": "not tested yet"
     },
     {

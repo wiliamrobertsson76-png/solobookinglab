@@ -2,7 +2,7 @@
   "project": "SoloBookingLab (pivot from NewsletterStack, owner decision 2026-09-05)",
   "owner": "William Robertsson",
   "updated": "2026-09-05",
-  "phase": "affiliate applications DONE via browser automation (SimplyBook.me pending approval, Jotform submitted, Formaloo submitted); next = PV-1/PV-2 capability verification + test accounts (B5) + approval emails",
+  "phase": "wave-1 applications done (SimplyBook pending, Formaloo submitted, Jotform owner-submitting) + wave-2 instant programs researched and registered (Bonsai, Dubsado, Setmore, SMS tools); next = owner registers wave-2 signups + PV-1/PV-2 capability fills + test accounts (B5)",
   "positioning": "Booking, client intake, deposits and reminders for solo and mobile service businesses. Audiences phase 1: mobile dog groomers, mobile car detailers, solo cleaners, driving instructors.",
   "customer_job": "What booking stack should I use so clients can choose a time, provide their address and job details, pay a deposit, receive reminders, and avoid no-shows - without paying for unnecessary team features?",
   "niche_history": "newsletter niche ARCHIVED 2026-09-05 (see docs/NICHE_VALIDATION_2026-09-05.md + decisions.jsonl); no further newsletter content will be published",
@@ -35,7 +35,7 @@
       "id": "B2",
       "title": "Register affiliate programs in the owner-mandated order",
       "why": "Identity-bound signups must be human; IDs enable attribution and revenue",
-      "needed_from_william": "ALL THREE NOW APPLIED (2026-09-05, via Playwright browser automation): SimplyBook.me = pending approval (your existing account), Jotform = submitted (confirm your 'thank you for signing up' email is the affiliate application), Formaloo = submitted. WHEN APPROVAL EMAILS ARRIVE: paste the affiliate ID/link from each dashboard here. Remaining manual: Trafft later (quality gate), Make/Pabbly for automation guides"
+      "needed_from_william": "WAVE 1 (2026-09-05): SimplyBook.me = pending approval; Formaloo = SUBMITTED (Calendly redirect IS their confirmation - no email is normal); Jotform = owner completing manually (email field anti-bot locked). WAVE 2 instant programs, in order: 1) Bonsai hellobonsai.com/affiliates (anyone can join; 200% first month / 30% yearly) 2) Dubsado dubsado.com/affiliate-program (free account -> affiliate code; $35/referral) 3) Setmore setmore.tapfiliate.com (~30%) 4) SimpleTexting simpletexting.com/partnership/sms-affiliate (10% recurring). Paste affiliate IDs/links here when each is registered"
     },
     {
       "id": "B5",
