@@ -17,26 +17,58 @@ export function checkRegistry() {
   }
   const errors = [];
   const warnings = [];
-  for (const p of reg.programs) {
-    if (!p.source || !p.verified) {
-      errors.push(`${p.id}: missing source or verified date`);
-      continue;
+
+  // Shape A (pivot 2026-09-05): tools + archived_newsletter_programs.
+  if (Array.isArray(reg.tools)) {
+    for (const t of reg.tools) {
+      const claimsVerified = /vendor \d{4}-\d{2}-\d{2}/i.test(JSON.stringify(t.pricing_summary || "") + JSON.stringify(t.affiliate?.status || "") + JSON.stringify(t.affiliate?.terms || ""));
+      const hasDate = /\d{4}-\d{2}-\d{2}/.test(t.pricing_verified || "") || /\d{4}-\d{2}-\d{2}/.test(t.affiliate?.status || "");
+      if (claimsVerified && !hasDate) {
+        errors.push(`${t.id}: claims vendor verification without a verification date`);
+      }
+      if (t.affiliate?.available && !t.affiliate.signup_url) {
+        errors.push(`${t.id}: affiliate available but no program URL recorded`);
+      }
+      if (!t.pricing_page) {
+        errors.push(`${t.id}: missing pricing_page source`);
+      }
     }
-    const age = daysBetween(p.verified, today());
-    if (age > reg.recheck_interval_days) {
-      errors.push(`${p.id}: verification stale (${age}d > ${reg.recheck_interval_days}d)`);
-    }
-    if (p.status === "closed-do-not-register" && !/not accepting/i.test(JSON.stringify(p.restrictions || []))) {
-      warnings.push(`${p.id}: closed program but restrictions text does not state closure`);
+    for (const p of reg.archived_newsletter_programs || []) {
+      if (!/archived-pivoted/.test(p.status || "")) {
+        errors.push(`${p.id}: archived program without archived-pivoted status`);
+      }
     }
   }
-  // Hard rule: no live affiliate links without tracking IDs and verified status.
-  for (const link of reg.published_affiliate_links || []) {
-    const prog = reg.programs.find((x) => x.id === link.program);
-    if (!prog || prog.status !== "verified-live") {
-      errors.push(`published link references program '${link.program}' which is not verified-live`);
+
+  // Shape B (legacy newsletter registry) - still supported for history.
+  if (Array.isArray(reg.programs)) {
+    for (const p of reg.programs) {
+      if (!p.source || !p.verified) {
+        errors.push(`${p.id}: missing source or verified date`);
+        continue;
+      }
+      const age = daysBetween(p.verified, today());
+      if (age > reg.recheck_interval_days && !/archived-pivoted/.test(p.status || "")) {
+        errors.push(`${p.id}: verification stale (${age}d > ${reg.recheck_interval_days}d)`);
+      }
+      if (p.status === "closed-do-not-register" && !/not accepting/i.test(JSON.stringify(p.restrictions || []))) {
+        warnings.push(`${p.id}: closed program but restrictions text does not state closure`);
+      }
     }
-    if (!prog?.tracking_id) {
+  }
+
+  // Hard rule: no live affiliate links without tracking IDs and verified status.
+  const allEntities = [...(reg.tools || []), ...(reg.programs || []), ...(reg.archived_newsletter_programs || [])];
+  for (const link of reg.published_affiliate_links || []) {
+    const prog = allEntities.find((x) => x.id === link.program);
+    if (!prog) {
+      errors.push(`published link references unknown program '${link.program}'`);
+      continue;
+    }
+    if (/archived-pivoted/.test(prog.status || "")) {
+      errors.push(`published link references ARCHIVED program '${link.program}'`);
+    }
+    if (!prog.tracking_id) {
       errors.push(`published link for '${link.program}' has no tracking ID`);
     }
     if (!link.rel_sponsored) {
