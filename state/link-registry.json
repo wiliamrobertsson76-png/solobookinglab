@@ -86,7 +86,7 @@
       "pricing_verified": "not yet fetched",
       "affiliate": {
         "available": true,
-        "status": "APPLIED 2026-09-05: application form submitted via official page (name/website/audience/promotion checkboxes); owner received signup-confirmation email - TO VERIFY email refers to the affiliate application specifically; do NOT re-submit (duplicate risk)",
+        "status": "REDO IN PROGRESS 2026-09-05: first attempt was never submitted (owner's 'thank you for signing up' email was NOT the affiliate application). Email field is anti-bot readonly; owner is completing the official form manually. Update to submitted once owner confirms Submit",
         "terms": "30% on every new paid user; one-year recurring per vendor blog; 60d cookie per third-party [vendor+third-party 2026-09-05]",
         "signup_url": "https://www.jotform.com/partnership/affiliate/",
         "tracking_id": null,
