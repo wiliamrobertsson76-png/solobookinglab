@@ -112,3 +112,44 @@
 {"ts":"2026-09-05T09:18:19.233Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (60ms)"}
 {"ts":"2026-09-05T09:18:19.251Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (7ms)"}
 {"ts":"2026-09-05T09:18:19.266Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (4ms)"}
+{"ts":"2026-09-05T10:03:18.417Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T10:03:18.537Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:18.979Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T10:03:18.983Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (6ms)"}
+{"ts":"2026-09-05T10:03:19.097Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.099Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.107Z","jobId":53,"level":"WARN","message":"job retry scheduled (attempt 1): Error: calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.215Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.218Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.220Z","jobId":53,"level":"WARN","message":"job retry scheduled (attempt 2): Error: calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.314Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.316Z","jobId":"site-qa","level":"ERROR","message":"calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.318Z","jobId":53,"level":"ERROR","message":"job dead-lettered: Error: calculator.html: missing meta description"}
+{"ts":"2026-09-05T10:03:19.339Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (7ms)"}
+{"ts":"2026-09-05T10:03:19.353Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (4ms)"}
+{"ts":"2026-09-05T10:03:57.304Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T10:03:57.374Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-05T10:03:57.716Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T10:03:57.719Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (6ms)"}
+{"ts":"2026-09-05T10:03:57.740Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (7ms)"}
+{"ts":"2026-09-05T10:03:57.757Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (5ms)"}
+{"ts":"2026-09-05T10:04:35.546Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T10:04:35.664Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-05T10:04:36.002Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T10:04:36.006Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (7ms)"}
+{"ts":"2026-09-05T10:04:36.024Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (6ms)"}
+{"ts":"2026-09-05T10:04:36.049Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (10ms)"}
+{"ts":"2026-09-05T10:08:09.791Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-05T10:08:10.030Z","jobId":"check-links","level":"ERROR","message":"reg.programs is not iterable"}
+{"ts":"2026-09-05T10:08:10.033Z","jobId":65,"level":"WARN","message":"job retry scheduled (attempt 1): TypeError: reg.programs is not iterable"}
+{"ts":"2026-09-05T10:08:10.043Z","jobId":"check-links","level":"ERROR","message":"reg.programs is not iterable"}
+{"ts":"2026-09-05T10:08:10.045Z","jobId":65,"level":"WARN","message":"job retry scheduled (attempt 2): TypeError: reg.programs is not iterable"}
+{"ts":"2026-09-05T10:08:10.054Z","jobId":"check-links","level":"ERROR","message":"reg.programs is not iterable"}
+{"ts":"2026-09-05T10:08:10.056Z","jobId":65,"level":"ERROR","message":"job dead-lettered: TypeError: reg.programs is not iterable"}
+{"ts":"2026-09-05T10:08:10.067Z","jobId":"kpi-snapshot","level":"ERROR","message":"Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-09-05T10:08:10.069Z","jobId":66,"level":"WARN","message":"job retry scheduled (attempt 1): TypeError: Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-09-05T10:08:10.079Z","jobId":"kpi-snapshot","level":"ERROR","message":"Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-09-05T10:08:10.081Z","jobId":66,"level":"WARN","message":"job retry scheduled (attempt 2): TypeError: Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-09-05T10:08:10.089Z","jobId":"kpi-snapshot","level":"ERROR","message":"Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-09-05T10:08:10.091Z","jobId":66,"level":"ERROR","message":"job dead-lettered: TypeError: Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-09-05T10:08:10.101Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (4ms)"}

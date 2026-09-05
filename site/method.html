@@ -3,68 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Editorial method &amp; verification policy — NewsletterStack</title>
-  <meta name="description" content="How NewsletterStack verifies platform prices and affiliate terms: primary sources only, date-stamped facts, quarterly re-verification.">
-  <link rel="canonical" href="https://wiliamrobertsson76-png.github.io/newsletterstack/method.html">
+  <title>Method, test protocol &amp; verification policy — SoloBookingLab</title>
+  <meta name="description" content="How SoloBookingLab verifies booking-tool claims: vendor-source labeling, a published 9-step product test protocol for mobile service businesses, and our corrections process.">
+  <link rel="canonical" href="https://wiliamrobertsson76-png.github.io/solobookinglab/method.html">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="index.html">Newsletter<span>Stack</span></a>
+      <a class="brand" href="index.html">SoloBooking<span>Lab</span></a>
       <nav aria-label="Main">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="fit-finder.html">Fit Finder</a></li>
+          <li><a href="dog-groomers.html">Dog groomers</a></li>
+          <li><a href="car-detailers.html">Car detailers</a></li>
           <li><a href="method.html" aria-current="page">Method</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <h1>Editorial method &amp; verification policy</h1>
+    <h1>Method, test protocol &amp; verification policy</h1>
 
-    <h2>Where our numbers come from</h2>
+    <h2>The three labels</h2>
     <ul>
-      <li><strong>Primary sources only for volatile facts.</strong> Prices, plan limits, commission
-        rates, cookie windows and restrictions are taken from the vendor's own pages
-        (pricing page, affiliate program page, legal terms) — never from third-party roundups.</li>
-      <li><strong>Date stamps.</strong> Every volatile fact carries the date it was verified and a
-        link to the source page. If we cannot verify a fact, we do not publish it.</li>
-      <li><strong>Re-verification.</strong> All registry entries are re-checked at least quarterly
-        (currently due 2026-12-03). Pages are updated with a new date when terms change.</li>
-      <li><strong>Labelled claims.</strong> We separate: verified vendor data · our own testing in
-        free plans/demos · calculations and models · assumptions. Models (like the calculator's
-        earnings estimate) are assumptions, never forecasts of what you will earn.</li>
+      <li><strong>Verified by our own test</strong> — we ran the product through the protocol below
+        in a real account and documented the date and what we saw. Nothing carries this label
+        today: our own account tests have not started yet.</li>
+      <li><strong>Verified in vendor documentation</strong> [vendor, date] — taken from the
+        vendor's own pricing page, help center or program page, with the date we fetched it.</li>
+      <li><strong>Not verified</strong> [unverified] — we do not know. We will not repeat vendor
+        marketing as fact. Unverified points are listed so you know what to test in your trial.</li>
     </ul>
+    <p>Third-party facts are marked [third-party, date] and are always weaker than vendor or
+      own-test labels. Where a vendor document and a third-party source disagree (e.g. which plan
+      includes deposits), we show both.</p>
 
-    <h2>How we test products</h2>
-    <p>When we say we tested something, it means the publisher, William Robertsson, created an
-      account in the
-      vendor's free plan or demo and used the features described. We never claim to have bought,
-      paid for or long-run a product unless documented on this page. Testing entries are listed
-      with dates as they happen.</p>
+    <h2>Published product test protocol (v1, 2026-09-05)</h2>
+    <p>Every scheduler is tested with the same workflow, in a free or trial account, before we
+      claim anything from our own testing:</p>
+    <ol>
+      <li>Create a mobile service with a service area.</li>
+      <li>Collect client address and job details at booking.</li>
+      <li>Add a travel-time buffer.</li>
+      <li>Require a deposit.</li>
+      <li>Enable reminders.</li>
+      <li>Test cancellation and rescheduling from the client side.</li>
+      <li>Test recurring booking where the feature exists.</li>
+      <li>Export client and booking data.</li>
+      <li>Document mobile experience, limits and which paid plan each feature required.</li>
+    </ol>
+    <p>Test entries appear on this page with dates as they are performed. Accounts for testing are
+      created by the publisher with real details; we never publish fake experiences.</p>
 
-    <h2>Corrections</h2>
-    <p>Found an error? <a href="contact.html">Contact us</a>. Material corrections get a visible
-      note on the affected page with the date of the change.</p>
+    <h2>How the Fit Finder works</h2>
+    <p>The Fit Finder is rule-based: your answers create a needs list, and each scheduler is
+      checked against verified capabilities only. Capabilities we have not verified count as
+      unknown and are shown as unverified in the result — they never silently improve or hurt a
+      ranking beyond an explicit "not verified by us" note. The full data table with per-fact
+      labels ships inside the page source (<code>site/js/fit-finder.js</code>) so every result is
+      reproducible.</p>
 
     <h2>Affiliate policy</h2>
-    <p>Some outbound links may be affiliate links. Affiliate status is always disclosed near the
-      link, and affiliate links carry <code>rel="sponsored"</code>. Commissions never influence
-      our recommendations; where we rank platforms we state the criteria. Current registered
-      programs and their verified terms are listed on the
-      <a href="calculator.html">calculator page sources</a>.</p>
+    <p>Some outbound links may be affiliate links, disclosed near where they appear and marked
+      <code>rel="sponsored"</code>. Commission never affects the rules, the labels, the protocol or
+      the ranking: products without affiliate programs (today: Square Appointments, Fresha,
+      Calendly) are included on merit under identical rules. We never present ordinary destination
+      links as affiliate links, and we do not recommend a product because it pays more.</p>
+
+    <h2>Fact freshness</h2>
+    <p>Pricing and program terms are volatile. Every volatile fact carries its verification date.
+      Entries are re-checked at least quarterly (next scheduled re-check: 2026-12-05). When terms
+      change, pages are updated with new dates.</p>
+
+    <h2>Corrections</h2>
+    <p>Found an error? <a href="corrections.html">Corrections policy</a> — public issues, visible
+      notes on affected pages, dated.</p>
   </main>
 
   <footer class="site">
     <div class="wrap">
       <p>© 2026 William Robertsson, Sweden. No cookies, no analytics scripts, no tracking.</p>
-      <p><a href="about.html">About</a> · <a href="contact.html">Contact</a> ·
-        <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+      <p><a href="about.html">About</a> · <a href="corrections.html">Corrections</a> ·
+        <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a> ·
+        <a href="terms.html">Terms</a></p>
     </div>
   </footer>
 </body>

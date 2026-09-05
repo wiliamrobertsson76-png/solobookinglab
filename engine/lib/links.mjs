@@ -48,6 +48,23 @@ export function checkRegistry() {
 }
 
 const ALLOWED_OUTBOUND = [
+  // booking-stack vendors (pivot 2026-09-05)
+  "simplybook.me",
+  "affiliate.simplybook.me",
+  "squareup.com",
+  "fresha.com",
+  "www.fresha.com",
+  "calendly.com",
+  "trafft.com",
+  "jotform.com",
+  "www.jotform.com",
+  "formaloo.com",
+  "www.formaloo.com",
+  "make.com",
+  "www.make.com",
+  "pabbly.com",
+  "www.pabbly.com",
+  // historical registry entries (archived niche, kept for redirect integrity)
   "kit.com",
   "www.beehiiv.com",
   "beehiiv.com",
@@ -58,11 +75,10 @@ const ALLOWED_OUTBOUND = [
   "getresponse.com",
   "www.aweber.com",
   "aweber.com",
-  "www.pabbly.com",
-  "pabbly.com",
   "selzy.com",
   "www.notion.com",
   "notion.com",
+  // infrastructure
   "github.com"
 ];
 

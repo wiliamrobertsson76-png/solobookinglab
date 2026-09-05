@@ -1,7 +1,144 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "recheck_interval_days": 90,
-  "programs": [
+  "note": "PIVOT 2026-09-05: booking stack decision support. Old newsletter programs below are archived-pivoted. New tool entries carry verification labels. Affiliate registration order is owner-mandated: SimplyBook.me -> Jotform+Formaloo -> Trafft (when site quality suffices) -> Make/Pabbly only for automation guides.",
+  "tools": [
+    {
+      "id": "simplybook_me",
+      "name": "SimplyBook.me",
+      "role": "scheduler",
+      "pricing_page": "https://simplybook.me/en/pricing",
+      "pricing_verified": "2026-09-05",
+      "pricing_summary": "Free 50 bookings/mo 1 custom feature; Basic EUR 13.9/mo 100 bookings; Standard EUR 29.9/mo 500; Premium EUR 59.9/mo 2000 [vendor 2026-09-05]",
+      "affiliate": {
+        "available": true,
+        "status": "instant-access per program page [vendor 2026-09-05]",
+        "terms": "25% of first payment + 15% of subsequent payments up to 24 months [vendor 2026-09-05]",
+        "signup_url": "https://simplybook.me/en/affiliate-program",
+        "tracking_id": null,
+        "registered": false
+      },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "square_appointments",
+      "name": "Square Appointments",
+      "role": "scheduler",
+      "pricing_page": "https://squareup.com/us/en/appointments/pricing",
+      "pricing_verified": "2026-09-05",
+      "pricing_summary": "Free solo one location; Plus $49/mo [vendor 2026-09-05]",
+      "affiliate": {
+        "available": false,
+        "status": "no affiliate program found 2026-09-05 - included on merit"
+      },
+      "notes": "deposits + card-held no-show protection in vendor help docs [2026-09-05]; Plus-plan gating disputed by third-party - verify in own test",
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "trafft",
+      "name": "Trafft",
+      "role": "scheduler",
+      "pricing_page": "https://trafft.com/pricing/",
+      "pricing_verified": "2026-09-05",
+      "pricing_summary": "forever-free plan; paid from Professional [vendor 2026-09-05]",
+      "affiliate": {
+        "available": true,
+        "status": "exists; owner mandate: apply ONLY when site quality suffices for review",
+        "terms": "30% recurring, 400-day cookie [vendor 2026-09-05]",
+        "signup_url": "https://trafft.com/affiliate/",
+        "tracking_id": null,
+        "registered": false
+      },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "fresha",
+      "name": "Fresha",
+      "role": "scheduler",
+      "pricing_page": "https://www.fresha.com/pricing",
+      "pricing_verified": "2026-09-05",
+      "pricing_summary": "no free plan; 7-day trial; per bookable team member, independent tier $19.95/mo [vendor 2026-09-05]",
+      "affiliate": {
+        "available": false,
+        "status": "no affiliate program found 2026-09-05 - included on merit"
+      },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "calendly",
+      "name": "Calendly",
+      "role": "scheduler",
+      "pricing_page": "https://calendly.com/pricing",
+      "pricing_verified": "2026-09-05",
+      "pricing_summary": "Free: 1 event type 1 calendar connection; paid from ~$10-12/seat/mo [vendor 2026-09-05]",
+      "affiliate": {
+        "available": false,
+        "status": "no affiliate program found 2026-09-05 - included on merit"
+      },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "jotform",
+      "name": "Jotform",
+      "role": "intake-addon",
+      "pricing_page": "https://www.jotform.com/pricing/",
+      "pricing_verified": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "program page verified 2026-09-05",
+        "terms": "30% on every new paid user; one-year recurring per vendor blog; 60d cookie per third-party [vendor+third-party 2026-09-05]",
+        "signup_url": "https://www.jotform.com/partnership/affiliate/",
+        "tracking_id": null,
+        "registered": false
+      },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "formaloo",
+      "name": "Formaloo",
+      "role": "intake-addon",
+      "pricing_page": "https://www.formaloo.com/pricing",
+      "pricing_verified": "not yet fetched",
+      "affiliate": {
+        "available": true,
+        "status": "program page verified 2026-09-05",
+        "terms": "25-40% lifetime [vendor 2026-09-05]",
+        "signup_url": "https://www.formaloo.com/affiliate-program",
+        "tracking_id": null,
+        "registered": false
+      },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "role": "automation-addon",
+      "pricing_page": "https://www.make.com/en/pricing",
+      "pricing_verified": "not re-verified 2026-09-05",
+      "affiliate": {
+        "available": false,
+        "status": "not investigated this pivot; only relevant for automation guides"
+      },
+      "own_test": "not tested yet"
+    },
+    {
+      "id": "pabbly_connect",
+      "name": "Pabbly Connect",
+      "role": "automation-addon",
+      "pricing_page": "https://www.pabbly.com/connect/",
+      "pricing_verified": "not re-verified 2026-09-05",
+      "affiliate": {
+        "available": true,
+        "status": "program verified 2026-09-04",
+        "terms": "30% lifetime recurring [vendor 2026-09-04]",
+        "signup_url": "https://www.pabbly.com/affiliates/",
+        "tracking_id": null,
+        "registered": false
+      },
+      "own_test": "not tested yet"
+    }
+  ],
+  "archived_newsletter_programs": [
     {
       "id": "kit",
       "name": "Kit (ConvertKit)",
@@ -20,11 +157,18 @@
         "cookie_days": null,
         "cookie_note": "not stated on program page as of 2026-09-04; confirm in dashboard after approval"
       },
-      "payout": {"min_usd": null, "note": "confirm in dashboard after approval"},
-      "restrictions": ["no self-signups via own link", "PPC referrals excluded from tier qualification"],
+      "payout": {
+        "min_usd": null,
+        "note": "confirm in dashboard after approval"
+      },
+      "restrictions": [
+        "no self-signups via own link",
+        "PPC referrals excluded from tier qualification"
+      ],
       "verified": "2026-09-04",
       "source": "https://kit.com/affiliate",
-      "status": "awaiting-human-registration"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "beehiiv",
@@ -44,11 +188,19 @@
         "cookie_days": 60,
         "attribution": "first-click"
       },
-      "payout": {"min_usd": null, "note": "paid on 15th monthly via PayPal"},
-      "restrictions": ["brand-term search ads on Google/Bing prohibited", "no paid traffic planned by us anyway", "no self-signups via own link"],
+      "payout": {
+        "min_usd": null,
+        "note": "paid on 15th monthly via PayPal"
+      },
+      "restrictions": [
+        "brand-term search ads on Google/Bing prohibited",
+        "no paid traffic planned by us anyway",
+        "no self-signups via own link"
+      ],
       "verified": "2026-09-04",
       "source": "https://www.beehiiv.com/partners",
-      "status": "awaiting-human-registration"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "mailerlite",
@@ -68,11 +220,17 @@
         "cookie_days": 45,
         "attribution": "cookie-based"
       },
-      "payout": {"min_usd": 100, "note": "min $100 from >=2 unique referrals; 30-day refund hold; Friday settlements; USD only"},
-      "restrictions": ["USD payouts only (FX fees apply for SEK)"],
+      "payout": {
+        "min_usd": 100,
+        "note": "min $100 from >=2 unique referrals; 30-day refund hold; Friday settlements; USD only"
+      },
+      "restrictions": [
+        "USD payouts only (FX fees apply for SEK)"
+      ],
       "verified": "2026-09-04",
       "source": "https://www.mailerlite.com/affiliate",
-      "status": "awaiting-human-registration"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "systeme_io",
@@ -92,13 +250,17 @@
         "cookie_days": null,
         "attribution": "lifetime last-cookie tagging"
       },
-      "payout": {"min_usd": 30, "note": "payouts processed on the 10th monthly; PayPal or wire"},
+      "payout": {
+        "min_usd": 30,
+        "note": "payouts processed on the 10th monthly; PayPal or wire"
+      },
       "restrictions": [],
       "verified": "2026-09-04",
       "source": "https://systeme.io/affiliate-program",
-      "status": "registered-awaiting-site",
+      "status": "archived-pivoted-2026-09-05",
       "affiliate_link_pattern": "https://systeme.io/?sa=sa02807287488c417a865e12cf28f57a8bb080b124",
-      "note": "ID provided by William from dashboard 2026-09-04; dashboard URL https://systeme.io/sv?sa=<id> also valid"
+      "note": "ID provided by William from dashboard 2026-09-04; dashboard URL https://systeme.io/sv?sa=<id> also valid",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "getresponse",
@@ -119,11 +281,17 @@
         "cookie_note": "not stated on primary page; third-party sources claim 120d - confirm in dashboard",
         "access": "self-serve registration via PartnerStack - instant, no approval queue"
       },
-      "payout": {"min_usd": null, "note": "recurring paid ~20th monthly for prior month verified sales (per GetResponse help)"},
-      "restrictions": ["confirm current cohort terms in PartnerStack after signup"],
+      "payout": {
+        "min_usd": null,
+        "note": "recurring paid ~20th monthly for prior month verified sales (per GetResponse help)"
+      },
+      "restrictions": [
+        "confirm current cohort terms in PartnerStack after signup"
+      ],
       "verified": "2026-09-04",
       "source": "https://www.getresponse.com/affiliate-programs",
-      "status": "instant-signup-available"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "aweber",
@@ -144,11 +312,15 @@
         "cookie_note": "not stated on primary page; third-party sources claim 365d - confirm in dashboard",
         "access": "free self-serve Advocate account - instant"
       },
-      "payout": {"min_usd": null, "note": "confirm in advocate dashboard after signup"},
+      "payout": {
+        "min_usd": null,
+        "note": "confirm in advocate dashboard after signup"
+      },
       "restrictions": [],
       "verified": "2026-09-04",
       "source": "https://www.aweber.com/advocates.htm",
-      "status": "instant-signup-available"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "pabbly",
@@ -168,11 +340,15 @@
         "cookie_days": 365,
         "access": "free self-serve signup - instant, anyone can join"
       },
-      "payout": {"min_usd": null, "note": "monthly via PayPal; no cash-out limit (per program page)"},
+      "payout": {
+        "min_usd": null,
+        "note": "monthly via PayPal; no cash-out limit (per program page)"
+      },
       "restrictions": [],
       "verified": "2026-09-04",
       "source": "https://www.pabbly.com/affiliates/",
-      "status": "instant-signup-available"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "selzy",
@@ -193,28 +369,39 @@
         "cookie_note": "not stated on primary page; third-party sources claim 365d - confirm in dashboard",
         "access": "free self-serve signup in minutes - instant"
       },
-      "payout": {"min_usd": null, "note": "confirm in dashboard after signup"},
+      "payout": {
+        "min_usd": null,
+        "note": "confirm in dashboard after signup"
+      },
       "restrictions": [],
       "verified": "2026-09-04",
       "source": "https://selzy.com/en/partners/affiliate-program/",
-      "status": "instant-signup-available"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     },
     {
       "id": "notion",
       "name": "Notion",
       "category": "productivity",
       "signup_url": "https://www.notion.com/affiliates",
-      "destinations": {"home": "https://www.notion.com/"},
+      "destinations": {
+        "home": "https://www.notion.com/"
+      },
       "tracking_id": null,
       "disclosure_required": true,
-      "commission": {"structure": "$50 per activated signup + 20% of year-one revenue (historic terms)", "cookie_days": null},
+      "commission": {
+        "structure": "$50 per activated signup + 20% of year-one revenue (historic terms)",
+        "cookie_days": null
+      },
       "payout": {},
-      "restrictions": ["PROGRAM CLOSED to new affiliates as of 2026-09-04"],
+      "restrictions": [
+        "PROGRAM CLOSED to new affiliates as of 2026-09-04"
+      ],
       "verified": "2026-09-04",
       "source": "https://www.notion.com/affiliates",
-      "status": "closed-do-not-register"
+      "status": "archived-pivoted-2026-09-05",
+      "archived_note": "newsletter niche closed by owner decision; kept for history only"
     }
   ],
-  "published_affiliate_links": [],
-  "notes": "No affiliate URL may be used in published content until: (1) William registered, (2) tracking ID stored as GitHub Secret + registered here, (3) link validator confirms the generated URL resolves correctly. Test links use the harmless pattern specified by each program."
+  "published_affiliate_links": []
 }

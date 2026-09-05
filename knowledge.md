@@ -53,3 +53,21 @@ See state/link-registry.json for full entries with source URLs. Summary:
 ## Session protocol
 At session end: update state/current.json (next exact run point), state/backlog.json, decisions,
 test results, logs/. Next "JOBBA" must resume without re-planning.
+
+# PIVOT 2026-09-05 (owner decision — overrides earlier niche decisions)
+- Commercial focus: **"Booking, client intake, deposits and reminders for solo and mobile service
+  businesses."** Phase-1 audiences: mobile dog groomers, mobile car detailers, solo cleaning
+  businesses, driving instructors. Working name: **SoloBookingLab** (preliminary brand check
+  2026-09-05: GitHub repo free, zero web hits; no domain purchased).
+- The newsletter niche (NewsletterStack) is ARCHIVED: old tasks marked archived-pivoted (never
+  completed), registry programs archived for history, no further newsletter content published.
+  Do not defend or revive it. Sunk cost has no weight.
+- Rule hierarchy: owner decisions > knowledge.md > docs/* > state/*. Never force-push, never
+  delete history, keep tests + compliance pages intact through pivots.
+- Honest-data constitution for this project: every capability/price/commission claim carries a
+  label — [vendor date] / [third-party date] / [own test date] / [unverified]. "Unverified" is
+  always displayed, never hidden. Commission never affects recommendations; tools without
+  affiliate programs are included on merit.
+- System description: **session-autonomous** (human-started Freebuff sessions; agent chooses and
+  executes within a session). Do NOT describe the system as running 24/7; GitHub Actions covers
+  only maintenance jobs (tests, QA, freshness checks, deploy).

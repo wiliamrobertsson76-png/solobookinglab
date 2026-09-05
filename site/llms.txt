@@ -1,25 +1,15 @@
-# NewsletterStack
+# SoloBookingLab
 
-Verified, date-stamped information and free tools for newsletter creators:
-platform cost comparison, affiliate program terms decoded, and migration guides.
+Independent decision support for solo and mobile service businesses (mobile dog groomers,
+mobile car detailers, solo cleaners, driving instructors): choosing a booking stack for
+scheduling, client intake, deposits, reminders and no-show protection without paying for
+team features.
 
-Publisher: William Robertsson (individual), Sweden. No cookies, no analytics, no tracking.
+- Fit Finder: rule-based booking-stack recommendations with visible rules and labeled verification.
+- Method & test protocol: published 9-step test all product claims must pass before we label them "verified by our own test".
+- Verticals: mobile dog groomers, mobile car detailers (more planned, published only when verified).
 
-## Tools
-
-- [Cost & affiliate earnings calculator](https://wiliamrobertsson76-png.github.io/newsletterstack/calculator.html):
-  compares Kit, beehiiv, MailerLite and Systeme.io at a given subscriber count; models affiliate
-  earnings from explicit user-entered assumptions. All data date-stamped with primary sources.
-
-## Reference pages
-
-- [Editorial method & verification policy](https://wiliamrobertsson76-png.github.io/newsletterstack/method.html):
-  primary-source-only policy, verification dates, corrections process.
-- [About](https://wiliamrobertsson76-png.github.io/newsletterstack/about.html): who runs the site and how it is funded.
-- [Privacy](https://wiliamrobertsson76-png.github.io/newsletterstack/privacy.html): no cookies, no tracking.
-- [Terms](https://wiliamrobertsson76-png.github.io/newsletterstack/terms.html): information, not advice.
-
-## Data verification
-
-Volatile facts (prices, commission terms, plan limits) are verified against vendor primary pages
-and re-checked quarterly. Current verification date: 2026-09-04.
+Data rules: volatile facts carry vendor-source labels and verification dates; unverified points
+are shown as unverified. Commission never affects recommendations; tools without affiliate
+programs are included on merit. Publisher: William Robertsson, individual, Sweden.
+Corrections: public via the repository issue tracker; log at /corrections.html.

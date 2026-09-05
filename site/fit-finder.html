@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solo Service Booking Fit Finder (free) — SoloBookingLab</title>
+  <meta name="description" content="Answer 12 questions about how your solo or mobile service business works and get a rule-based booking-stack starting point — every recommendation explained by visible rules, unverified points labeled.">
+  <link rel="canonical" href="https://wiliamrobertsson76-png.github.io/solobookinglab/fit-finder.html">
+  <meta property="og:title" content="Solo Service Booking Fit Finder">
+  <meta property="og:description" content="Rule-based booking stack recommendations for solo and mobile service businesses. Visible rules, labeled verification, no cookies.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Solo Service Booking Fit Finder",
+    "operatingSystem": "Any (browser)",
+    "description": "Rule-based decision support that matches a solo or mobile service business with booking, intake, deposit, reminder and automation tooling. Every recommendation is explained by visible rules and verification labels.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Person", "name": "William Robertsson" }
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">SoloBooking<span>Lab</span></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fit-finder.html" aria-current="page">Fit Finder</a></li>
+          <li><a href="dog-groomers.html">Dog groomers</a></li>
+          <li><a href="car-detailers.html">Car detailers</a></li>
+          <li><a href="method.html">Method</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Solo Service Booking Fit Finder</h1>
+    <p class="lede">Answer how your business actually works. The result is computed by visible
+      rules — not AI, not paid placement — and every point we have not verified is labeled as
+      unverified so you know what to check in your trial.</p>
+
+    <div class="disclosure">
+      <p><strong>Affiliate disclosure:</strong> Some links on this site are affiliate links. If you
+        buy through them, we may earn a commission at no extra cost to you. Commission never
+        affects the rules or the order of results. Publisher: William Robertsson, individual,
+        Sweden.</p>
+    </div>
+
+    <form id="sbl-form" class="tool" aria-labelledby="ff-h">
+      <h2 id="ff-h">Your business</h2>
+
+      <div class="field"><label for="q-solo">1. Do you work alone (no staff to book)?</label>
+        <select id="q-solo" name="solo"><option value="">—</option><option value="yes">Yes, solo</option><option value="no">No, I have staff</option></select></div>
+
+      <div class="field"><label for="q-mobile">2. Do you travel to clients (mobile service)?</label>
+        <select id="q-mobile" name="mobile"><option value="">—</option><option value="yes">Yes, mobile</option><option value="no">No, fixed location</option></select></div>
+
+      <div class="field"><label for="q-address">3. Must clients give their address and job details?</label>
+        <select id="q-address" name="address"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-geo">4. Do you limit where you serve (service areas)?</label>
+        <select id="q-geo" name="geo"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-duration">5. Do job lengths vary (short vs long visits)?</label>
+        <select id="q-duration" name="duration"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-deposit">6. Do you want deposits to deter no-shows?</label>
+        <select id="q-deposit" name="deposit"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-recurring">7. Do clients book repeatedly (weekly/monthly)?</label>
+        <select id="q-recurring" name="recurring"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-sms">8. Do you want SMS reminders?</label>
+        <select id="q-sms" name="sms"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-forms">9. Should clients fill a form before the visit?</label>
+        <select id="q-forms" name="forms"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-pay">10. Should clients pay online?</label>
+        <select id="q-pay" name="pay"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-buffer">11. Do you need travel-time buffers between jobs?</label>
+        <select id="q-buffer" name="buffer"><option value="">—</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+
+      <div class="field"><label for="q-budget">12. Monthly budget for booking software</label>
+        <select id="q-budget" name="budget"><option value="">—</option><option value="free">Free only</option><option value="low">Up to ~$25/mo</option><option value="flexible">Flexible if it earns its keep</option></select></div>
+
+      <button type="submit">Show my booking stack starting point</button>
+      <p class="note">Nothing is sent anywhere: answers are computed in your browser. No cookies,
+        no account.</p>
+    </form>
+
+    <section aria-labelledby="res-h" class="tool">
+      <h2 id="res-h">Your result</h2>
+      <div id="sbl-out" role="region" aria-live="polite">
+        <p class="note">Answer the questions above and press the button. The static table below
+          works without JavaScript.</p>
+        <noscript>
+          <table>
+            <tr><th>Scheduler</th><th>Free plan?</th><th>Verified highlights</th></tr>
+            <tr><td>SimplyBook.me</td><td>Yes (50 bookings/mo)</td><td>intake custom fields; payments on Premium; 25%/15% affiliate program exists</td></tr>
+            <tr><td>Square Appointments</td><td>Yes (solo)</td><td>deposits &amp; no-show protection in vendor help docs; payments core</td></tr>
+            <tr><td>Trafft</td><td>Yes (forever-free)</td><td>per-service deposits; multiple payment methods on paid plans</td></tr>
+            <tr><td>Calendly</td><td>Yes (1 event type)</td><td>simple scheduling; deposit/address features not verified</td></tr>
+            <tr><td>Fresha</td><td>No (trial)</td><td>subscription per bookable team member</td></tr>
+          </table>
+          <p class="note">Verified 2026-09-05 from vendor pages; details and dates on the method page.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section aria-labelledby="howto-h">
+      <h2 id="howto-h">What to do with the result</h2>
+      <ol>
+        <li>Trial the suggested scheduler's free plan with one real booking.</li>
+        <li>Test the exact points we marked "not verified" for your needs — that is what they are for.</li>
+        <li>Only add an intake form tool or automation tool if the scheduler cannot do it. Fewer tools beats more tools.</li>
+        <li>Follow our <a href="method.html">9-step test protocol</a> on your own trial — it takes about 30 minutes.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>© 2026 William Robertsson, Sweden. No cookies, no analytics scripts, no tracking.</p>
+      <p><a href="about.html">About</a> · <a href="method.html">Method &amp; tests</a> ·
+        <a href="corrections.html">Corrections</a> · <a href="contact.html">Contact</a> ·
+        <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="js/fit-finder.js" defer></script>
+</body>
+</html>

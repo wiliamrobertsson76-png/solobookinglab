@@ -1,5 +1,48 @@
 {
   "jobs": [],
-  "deadLetter": [],
-  "seq": 51
+  "deadLetter": [
+    {
+      "id": 53,
+      "task": "site-qa",
+      "priority": 80,
+      "idempotencyKey": "site-qa:2026-09-05",
+      "payload": {},
+      "status": "dead",
+      "attempts": 3,
+      "createdAt": "2026-09-05T10:03:18.956Z",
+      "leasedAt": "2026-09-05T10:03:19.230Z",
+      "lastError": "Error: calculator.html: missing meta description",
+      "error": "Error: calculator.html: missing meta description",
+      "diedAt": "2026-09-05T10:03:19.318Z"
+    },
+    {
+      "id": 65,
+      "task": "check-links",
+      "priority": 90,
+      "idempotencyKey": "check-links:2026-09-05",
+      "payload": {},
+      "status": "dead",
+      "attempts": 3,
+      "createdAt": "2026-09-05T10:08:10.008Z",
+      "leasedAt": "2026-09-05T10:08:10.049Z",
+      "lastError": "TypeError: reg.programs is not iterable",
+      "error": "TypeError: reg.programs is not iterable",
+      "diedAt": "2026-09-05T10:08:10.055Z"
+    },
+    {
+      "id": 66,
+      "task": "kpi-snapshot",
+      "priority": 60,
+      "idempotencyKey": "kpi-snapshot:2026-09-05",
+      "payload": {},
+      "status": "dead",
+      "attempts": 3,
+      "createdAt": "2026-09-05T10:08:10.013Z",
+      "leasedAt": "2026-09-05T10:08:10.085Z",
+      "lastError": "TypeError: Cannot read properties of undefined (reading 'filter')",
+      "error": "TypeError: Cannot read properties of undefined (reading 'filter')",
+      "diedAt": "2026-09-05T10:08:10.090Z"
+    }
+  ],
+  "seq": 68
 }

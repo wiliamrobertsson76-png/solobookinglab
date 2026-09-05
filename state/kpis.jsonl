@@ -51,3 +51,16 @@
 {"ts":"2026-09-05T09:18:19.246Z","kpi":"registry_programs_tracked","value":9}
 {"ts":"2026-09-05T09:18:19.247Z","kpi":"programs_live","value":0}
 {"ts":"2026-09-05T09:18:19.249Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-05T10:03:19.335Z","kpi":"registry_programs_tracked","value":9}
+{"ts":"2026-09-05T10:03:19.337Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-05T10:03:19.338Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-05T10:03:57.734Z","kpi":"registry_programs_tracked","value":9}
+{"ts":"2026-09-05T10:03:57.736Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-05T10:03:57.738Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts":"2026-09-05T10:04:36.020Z","kpi":"registry_programs_tracked","value":9}
+{"ts":"2026-09-05T10:04:36.021Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-05T10:04:36.022Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "pivot_executed", "value": 1, "note": "SoloBookingLab MVP built; 6/6 tests; repo renamed via API; redirect live after deploy"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "affiliate_clicks", "value": 0, "note": "no affiliate links live (truth)"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "revenue_sek", "value": 0, "note": "0; project is an experiment"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "own_product_tests_done", "value": 0, "note": "accounts not yet created; protocol published"}

@@ -86,67 +86,74 @@ await run("site: QA passes on shipped pages", async () => {
   assert.ok(res.checked >= 6, "should check at least 6 pages");
 });
 
-// ---------- calculator interaction (regression: 2026-09-05 live crash, missing #order) ----------
-await run("calculator: interaction test - binds only existing inputs, renders, updates on input", async () => {
-  const html = readFileSync(path.join(ENGINE_ROOT, "site", "calculator.html"), "utf8");
-  const js = readFileSync(path.join(ENGINE_ROOT, "site", "js", "calculator.js"), "utf8");
+// ---------- fit finder interaction (regression class from the 2026-09-05 calculator crash) ----------
+await run("fit-finder: interaction test - binds only existing ids, renders rule-based result, emits events", async () => {
+  const html = readFileSync(path.join(ENGINE_ROOT, "site", "fit-finder.html"), "utf8");
+  const js = readFileSync(path.join(ENGINE_ROOT, "site", "js", "fit-finder.js"), "utf8");
 
-  // Regression 1: every id the script binds must exist as a static id in the page.
+  // Every id the script binds must exist as a static id in the page (the crash class).
   const boundIds = [...js.matchAll(/getElementById\("([^"]+)"\)/g)].map((m) => m[1]);
   const staticIds = [...html.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
   for (const id of new Set(boundIds)) {
-    assert.ok(staticIds.includes(id), `calculator.html must contain id="${id}" (script binds it)`);
+    assert.ok(staticIds.includes(id), `fit-finder.html must contain id="${id}" (script binds it)`);
   }
 
-  // Regression 2: run the real script against an emulated DOM; it must render and react.
-  const elements = new Map();
+  // Old URL must redirect, not 404: calculator.html -> fit-finder.html, noindex.
+  const calc = readFileSync(path.join(ENGINE_ROOT, "site", "calculator.html"), "utf8");
+  assert.match(calc, /http-equiv="refresh"/);
+  assert.match(calc, /url=fit-finder\.html/);
+  assert.match(calc, /noindex/);
+
+  // Run the real script against an emulated DOM: submit -> result + events.
+  const events = [];
+  const els = new Map();
   for (const id of staticIds) {
-    elements.set(id, {
-      value: id === "subs" ? "1000" : "",
-      innerHTML: "",
-      attrs: {},
-      listeners: {},
-      setAttribute(k, v) { this.attrs[k] = v; },
-      addEventListener(ev, fn) { this.listeners[ev] = fn; }
-    });
+    els.set(id, { innerHTML: "", attrs: {}, listeners: {}, setAttribute(k, v) { this.attrs[k] = v; }, addEventListener(ev, fn) { this.listeners[ev] = fn; } });
   }
   const docListeners = {};
   const document = {
-    getElementById: (id) => elements.get(id) || null,
-    addEventListener: (ev, fn) => { docListeners[ev] = fn; }
+    getElementById: (id) => els.get(id) || null,
+    querySelector: (sel) => ({ value: /budget/.test(sel) ? "low" : "yes" }),
+    addEventListener: (ev, fn) => { (docListeners[ev] = docListeners[ev] || []).push(fn); },
+    removeEventListener: () => {},
+    dispatchEvent: (e) => { events.push(e.detail && e.detail.event); return true; }
   };
-  new vm.Script(js, { filename: "calculator.js" }).runInNewContext({ document });
-  assert.ok(docListeners.DOMContentLoaded, "script must register a DOMContentLoaded handler");
-  docListeners.DOMContentLoaded(); // any missing id here means the old crash class is back
+  class CustomEvent { constructor(type, opts) { this.type = type; this.detail = opts && opts.detail; } }
+  new vm.Script(js, { filename: "fit-finder.js" }).runInNewContext({ document, CustomEvent });
+  assert.ok(docListeners.DOMContentLoaded, "script must register DOMContentLoaded handler");
+  for (const fn of docListeners.DOMContentLoaded) fn();
+  // simulate the user's first interaction (fires fit_finder_started)
+  for (const fn of docListeners.change || []) fn();
 
-  const out = elements.get("out");
-  assert.match(out.innerHTML, /<table>/, "render() must produce the results table on load");
-  assert.match(out.innerHTML, /\$0/, "1000 subs must show at least one free-plan $0");
+  const form = els.get("sbl-form");
+  assert.ok(form.listeners.submit, "submit handler must be bound");
+  form.listeners.submit({ preventDefault() {} });
+
+  const out = els.get("sbl-out");
+  assert.match(out.innerHTML, /Suggested starting point/, "result must render");
+  assert.match(out.innerHTML, /<table>/, "comparison table must render");
+  assert.match(out.innerHTML, /SimplyBook\.me/, "verified schedulers must appear");
+  assert.match(out.innerHTML, /not verified/, "unverified points must be labeled as such");
   assert.equal(out.attrs["data-computed"], "true");
-
-  // 30,000 subs: Kit and MailerLite are beyond verified tiers -> must say so, not guess a price
-  elements.get("subs").value = "30000";
-  elements.get("subs").listeners.input();
-  assert.match(out.innerHTML, /not verified this high/, "beyond-tier rows must refuse to guess");
-  assert.match(out.innerHTML, /\$96/, "beehiiv Max tier at 30k subs must show $96");
-
-  // Regression 3: a page missing #subs entirely must not crash on load.
-  const bareDoc = { getElementById: () => null, addEventListener: () => {} };
-  new vm.Script(js, { filename: "calculator.js" }).runInNewContext({ document: bareDoc });
+  assert.ok(events.includes("fit_finder_started"), "start event must fire");
+  assert.ok(events.includes("recommendation_viewed"), "recommendation event must fire");
+  assert.ok(events.includes("fit_finder_completed"), "completion event must fire");
 });
 
-// ---------- base-path safety (regression: GitHub Pages serves under /newsletterstack/) ----------
+// ---------- base-path safety (regression: GitHub Pages serves under /solobookinglab/) ----------
 await run("site: no root-relative href/src anywhere (GitHub Pages project base path)", async () => {
   const siteDir = path.join(ENGINE_ROOT, "site");
-  const files = readdirSync(siteDir).filter((f) => f.endsWith(".html"));
   const offenders = [];
-  const scan = (name, content) => {
+  const scan = (rel, content) => {
     for (const m of content.matchAll(/(?:href|src)="\/([^"/]*)"/g)) {
-      offenders.push(`${name}: root-relative "/${m[1]}" breaks under /newsletterstack/ base path`);
+      offenders.push(`${rel}: root-relative "/${m[1]}" breaks under /solobookinglab/ base path`);
     }
   };
-  for (const f of files) scan(f, readFileSync(path.join(siteDir, f), "utf8"));
-  scan("js/calculator.js", readFileSync(path.join(siteDir, "js", "calculator.js"), "utf8"));
+  for (const f of readdirSync(siteDir).filter((f) => f.endsWith(".html"))) {
+    scan(f, readFileSync(path.join(siteDir, f), "utf8"));
+  }
+  const jsDir = path.join(siteDir, "js");
+  for (const f of readdirSync(jsDir)) scan("js/" + f, readFileSync(path.join(jsDir, f), "utf8"));
   assert.deepEqual(offenders, []);
 });
 

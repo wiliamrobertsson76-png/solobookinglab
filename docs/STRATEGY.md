@@ -63,3 +63,15 @@ reported as forecast dressed as outcome.
 - SERP competition → win on tool + data freshness + migration guides, not generic listicles.
 - Single-channel dependence → tracked via KPI "program concentration" and "channel dependence".
 - Swedish consumer/marketing law → docs/COMPLIANCE.md checked per publication.
+
+---
+
+# PIVOT 2026-09-05 — SoloBookingLab (supersedes the above)
+
+Owner decision: focus = "Booking, client intake, deposits and reminders for solo and mobile
+service businesses" (mobile dog groomers, mobile car detailers, solo cleaners, driving
+instructors). Customer job: choose a booking stack so clients can pick a time, provide address
+and job details, pay a deposit, get reminders and avoid no-shows — without paying for team
+features. The newsletter strategy above is archived (kept for history, no weight). New MVP,
+Fit Finder rules, test protocol and affiliate order: see site/, state/backlog.json and
+state/link-registry.json.

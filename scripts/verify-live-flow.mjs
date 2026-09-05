@@ -1,10 +1,10 @@
-// Verifies the LIVE deployed main flow, not just HTTP 200:
-// fetches the exact bytes GitHub Pages serves and runs the calculator
+// Verifies the LIVE deployed SoloBookingLab main flow, not just HTTP 200:
+// fetches the exact bytes GitHub Pages serves and runs the Fit Finder
 // interaction test against them in an emulated DOM.
 // Run: node scripts/verify-live-flow.mjs [baseUrl]
 import vm from "node:vm";
 
-const BASE = process.argv[2] || "https://wiliamrobertsson76-png.github.io/newsletterstack/";
+const BASE = process.argv[2] || "https://wiliamrobertsson76-png.github.io/solobookinglab/";
 
 let failures = 0;
 function check(name, ok, detail = "") {
@@ -12,8 +12,9 @@ function check(name, ok, detail = "") {
   if (!ok) failures++;
 }
 
-const pages = ["", "calculator.html", "method.html", "about.html", "contact.html",
-  "privacy.html", "terms.html", "robots.txt", "sitemap.xml", "llms.txt", "js/calculator.js"];
+const pages = ["", "fit-finder.html", "dog-groomers.html", "car-detailers.html", "method.html",
+  "about.html", "contact.html", "privacy.html", "terms.html", "corrections.html",
+  "calculator.html", "robots.txt", "sitemap.xml", "llms.txt", "js/fit-finder.js"];
 
 const fetched = {};
 for (const p of pages) {
@@ -22,53 +23,52 @@ for (const p of pages) {
   check(`HTTP 200 /${p}`, res.status === 200, `status ${res.status}`);
 }
 
-const html = fetched["calculator.html"];
-const js = fetched["js/calculator.js"];
+const home = fetched[""];
+const ff = fetched["fit-finder.html"];
+const js = fetched["js/fit-finder.js"];
 
-check("live page has no phantom id=order input", !/id="order"/.test(html));
-check("live script binds no missing elements (order/ctr/conv)", !/"(order|ctr|conv)"/.test(js));
-check("live script has no root-relative /method.html link", !js.includes('"/method.html"'));
-check("live page has no FinanceApplication JSON-LD", !html.includes("FinanceApplication"));
-check("live homepage removed unsourced claim", !fetched[""].includes("Most comparison posts"));
+check("homepage is SoloBookingLab", home.includes("SoloBookingLab"));
+check("homepage names the audience", /dog groomers/i.test(home) && /car detailers/i.test(home));
+check("old calculator page redirects to fit-finder", /url=fit-finder\.html/.test(fetched["calculator.html"]));
+check("redirect stub is noindex", /noindex/.test(fetched["calculator.html"]));
+check("no newsletter-brand leftovers on homepage", !home.includes("NewsletterStack"));
+check("sitemap uses solobookinglab URLs", fetched["sitemap.xml"].includes("/solobookinglab/") && !fetched["sitemap.xml"].includes("newsletterstack"));
+check("fit-finder binds sbl-form and sbl-out", ff.includes('id="sbl-form"') && ff.includes('id="sbl-out"'));
 
 // Interaction test against the exact served bytes.
-const staticIds = [...html.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
+const staticIds = [...ff.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
 const boundIds = [...new Set([...js.matchAll(/getElementById\("([^"]+)"\)/g)].map((m) => m[1]))];
 const missing = boundIds.filter((id) => !staticIds.includes(id));
 check("every bound id exists in page", missing.length === 0, missing.join(",") || "all present");
 
 const els = new Map();
 for (const id of staticIds) {
-  els.set(id, {
-    value: id === "subs" ? "1000" : "",
-    innerHTML: "",
-    attrs: {},
-    listeners: {},
-    setAttribute(k, v) { this.attrs[k] = v; },
-    addEventListener(ev, fn) { this.listeners[ev] = fn; }
-  });
+  els.set(id, { innerHTML: "", attrs: {}, listeners: {}, setAttribute(k, v) { this.attrs[k] = v; }, addEventListener(ev, fn) { this.listeners[ev] = fn; } });
 }
 const docL = {};
+const events = [];
 const document = {
   getElementById: (id) => els.get(id) || null,
-  addEventListener: (e, f) => { docL[e] = f; }
+  querySelector: (sel) => ({ value: /budget/.test(sel) ? "low" : "yes" }),
+  addEventListener: (e, f) => { (docL[e] = docL[e] || []).push(f); },
+  removeEventListener: () => {},
+  dispatchEvent: (e) => { events.push(e.detail && e.detail.event); return true; }
 };
-new vm.Script(js, { filename: "live-calculator.js" }).runInNewContext({ document });
+class CustomEvent { constructor(type, opts) { this.type = type; this.detail = opts && opts.detail; } }
+new vm.Script(js, { filename: "live-fit-finder.js" }).runInNewContext({ document, CustomEvent });
 try {
-  docL.DOMContentLoaded();
-  const out = els.get("out");
-  check("renders results table on load", /<table>/.test(out.innerHTML));
-  check("1,000 subs shows a free-plan $0 row", /\$0/.test(out.innerHTML));
-  check("output marks data-computed", out.attrs["data-computed"] === "true");
-  check("source link is relative (works under /newsletterstack/)", /href="method\.html"/.test(out.innerHTML));
-
-  els.get("subs").value = "30000";
-  els.get("subs").listeners.input();
-  check("30,000 subs: beyond-tier rows refuse to guess", /not verified this high/.test(out.innerHTML));
-  check("30,000 subs: beehiiv verified $96 tier shown", /\$96/.test(out.innerHTML));
-  check("no crash on DOMContentLoaded", true);
+  for (const fn of docL.DOMContentLoaded) fn();
+  for (const fn of docL.change || []) fn(); // first user interaction -> fit_finder_started
+  const form = els.get("sbl-form");
+  check("submit handler bound", !!form.listeners.submit);
+  form.listeners.submit({ preventDefault() {} });
+  const out = els.get("sbl-out");
+  check("result renders on submit", /Suggested starting point/.test(out.innerHTML));
+  check("comparison table renders", /<table>/.test(out.innerHTML));
+  check("unverified points labeled", /not verified/.test(out.innerHTML));
+  check("events fired (started/completed/recommendation_viewed)", events.includes("fit_finder_started") && events.includes("fit_finder_completed") && events.includes("recommendation_viewed"), events.join(","));
 } catch (e) {
-  check("no crash on DOMContentLoaded", false, e.constructor.name + ": " + e.message);
+  check("no crash in Fit Finder flow", false, e.constructor.name + ": " + e.message);
 }
 
 console.log(failures === 0 ? "\nLIVE MAIN FLOW: WORKING" : `\nLIVE MAIN FLOW: ${failures} FAILURE(S)`);

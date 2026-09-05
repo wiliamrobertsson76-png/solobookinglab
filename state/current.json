@@ -1,60 +1,61 @@
 {
-  "project": "NewsletterStack (autonom-affiliate)",
+  "project": "SoloBookingLab (pivot from NewsletterStack, owner decision 2026-09-05)",
   "owner": "William Robertsson",
-  "updated": "2026-09-04",
-  "phase": "niche-revalidated SMALNA AV (2026-09-05); content freeze until gate items 2+3 close; next = BL-6 SERP checks + BL-7 competitor matrix",
-  "niche": "newsletter/email platform choice, migration and monetization for creators (under re-validation as of 2026-09-05)",
-  "verified_state": {
-    "tests": "4/4 passing (node engine/tests/run-all.mjs)",
-    "driftmotor": "runs green locally; queue idempotent; kill switch verified",
-    "site": "LIVE (all pages 200 on 2026-09-04) but calculator main flow BROKEN live - fix and live interaction re-test in progress 2026-09-05",
-    "affiliate_links_live": 0
-  },
+  "updated": "2026-09-05",
+  "phase": "pivot-executed: new MVP live after deploy; next = capability verification (PV-1/PV-2) + human registrations (B2)",
+  "positioning": "Booking, client intake, deposits and reminders for solo and mobile service businesses. Audiences phase 1: mobile dog groomers, mobile car detailers, solo cleaners, driving instructors.",
+  "customer_job": "What booking stack should I use so clients can choose a time, provide their address and job details, pay a deposit, receive reminders, and avoid no-shows - without paying for unnecessary team features?",
+  "niche_history": "newsletter niche ARCHIVED 2026-09-05 (see docs/NICHE_VALIDATION_2026-09-05.md + decisions.jsonl); no further newsletter content will be published",
+  "repo": "https://github.com/wiliamrobertsson76-png/solobookinglab",
+  "pages_base": "https://wiliamrobertsson76-png.github.io/solobookinglab",
   "site": {
-    "status": "LIVE and verified 200 on all pages 2026-09-04; known live defects found 2026-09-05 being repaired (see logs/session-2026-09-05.md)",
-    "deploy_target": "https://wiliamrobertsson76-png.github.io/newsletterstack/",
-    "deploy_url": "https://wiliamrobertsson76-png.github.io/newsletterstack/",
-    "deployment_mode": "fully automated: deploy-site workflow publishes site/ on every push to main; zero manual publishing steps",
-    "automation": "Actions enabled via API; deploy-site triggered via API; driftmotor scheduled daily 04:17 UTC"
+    "status": "pivot built: homepage, fit-finder.html (rule-based, visible rules, event hooks), dog-groomers.html, car-detailers.html, method.html (9-step public test protocol), corrections.html with pivot log entry; calculator.html = noindex redirect to fit-finder; newsletter branding removed from all pages",
+    "deploy": "automated on push to main via deploy-site workflow; GitHub redirects git traffic from old repo name automatically (no force push used)",
+    "redirect": "old /calculator.html -> /fit-finder.html via meta-refresh noindex stub"
   },
-  "repo": "https://github.com/wiliamrobertsson76-png/newsletterstack",
-  "pages_base": "https://wiliamrobertsson76-png.github.io/newsletterstack",
-  "affiliate_registrations": {
-    "systeme_io": {
-      "status": "registered",
-      "id_registered": true,
-      "id_source": "William pasted dashboard affiliate ID 2026-09-04"
-    },
-    "kit": "awaiting site live",
-    "beehiiv": "awaiting site live",
-    "mailerlite": "awaiting site live"
+  "verified_state": {
+    "tests": "6/6 passing (node engine/tests/run-all.mjs) incl. Fit Finder interaction test + base-path scan",
+    "affiliate_links_live": 0,
+    "own_product_tests": "none yet (accounts not created; protocol published on method.html)"
+  },
+  "affiliate_order_owner_mandated": [
+    "1) SimplyBook.me - instant access per program page [vendor 2026-09-05: 25% first payment + 15% up to 24 months]",
+    "2) Jotform (30% per program page) and Formaloo (25-40% lifetime per program page)",
+    "3) Trafft (30% recurring, 400-day cookie) ONLY when site quality suffices for review",
+    "4) Make and Pabbly Connect ONLY for relevant automation guides (Pabbly 30% lifetime verified 2026-09-04)"
+  ],
+  "measurement": {
+    "events_defined": ["fit_finder_started", "fit_finder_completed", "recommendation_viewed", "affiliate_click"],
+    "where": "document-level CustomEvents in fit-finder.js; sub-ID parameters added to affiliate links per program rules when IDs exist",
+    "gsc": "instructions ready (INSTALL_CHECKLIST section 6) - blocked until human verification",
+    "reported_as": "never report traffic/rankings/revenue that were not actually observed"
   },
   "human_blockers": [
     {
-      "id": "B4",
-      "title": "Verify Google Search Console (+ Bing Webmaster) for the site",
-      "why": "Funnel measurement (impressions/clicks/CTR) requires verified property; without it the project cannot prove progress or run kill-checks",
-      "needed_from_william": "Follow docs/INSTALL_CHECKLIST.md section 4 (DNS TXT via GitHub Pages settings or HTML file upload through repo invite)"
-    },
-    {
       "id": "B2",
-      "title": "Register the 5 instant-access affiliate programs (5-10 min total)",
-      "why": "Identity-bound signups must be human; IDs enable the revenue chain and sub-ID click tracking",
-      "needed_from_william": "GetResponse, AWeber, Pabbly, Selzy signups (Systeme.io already done); paste tracking IDs (not secret) here"
+      "title": "Register affiliate programs in the owner-mandated order",
+      "why": "Identity-bound signups must be human; IDs enable attribution and revenue",
+      "needed_from_william": "1) simplybook.me/en/affiliate-program (instant) 2) jotform.com/partnership/affiliate + formaloo.com/affiliate-program 3) later Trafft. Paste public IDs/links back here; verify terms shown at signup match our registry"
     },
     {
       "id": "B5",
-      "title": "Create 2 free-plan test accounts (Kit, beehiiv) for documented migration testing",
-      "why": "Migration-risk guide must be based on real tested accounts, and account creation is identity-bound",
-      "needed_from_william": "Create accounts with your real details; share only workspace URLs/test handles, never passwords"
+      "title": "Create test accounts for own-product tests (SimplyBook.me first, then Square Appointments, Trafft)",
+      "why": "The 9-step protocol needs real accounts; creation is identity-bound",
+      "needed_from_william": "Create free accounts with your real details; share only workspace URLs/test handles, never passwords"
+    },
+    {
+      "id": "B4",
+      "title": "Verify Google Search Console for the new URL",
+      "why": "Funnel measurement; nothing about traffic can be reported until then",
+      "needed_from_william": "Follow docs/INSTALL_CHECKLIST.md section 6 with URL https://wiliamrobertsson76-png.github.io/solobookinglab/"
     },
     {
       "id": "B3",
       "title": "Optional domain purchase (~120 SEK/yr) or 'skip'",
-      "why": "Cost decision requires explicit approval with amount and purpose",
+      "why": "Cost decision requires explicit approval",
       "needed_from_william": "Explicit approval or 'skip - use github.io'"
     }
   ],
-  "next_exact_run_point": "BL-6: SERP-check the remaining 17 bottom-funnel questions (update niche-matrix json). Then BL-7 competitor matrix for the break-even calculator. Content production stays frozen until both pass. See docs/NICHE_VALIDATION_2026-09-05.md.",
-  "session_protocol": "Read knowledge.md first. Update this file, backlog, logs at session end."
+  "next_exact_run_point": "PV-1: fetch SimplyBook.me vendor docs for deposits/SMS-gating/travel-buffer/variable-duration and update fit-finder.js caps with [vendor date] labels. Then PV-2 same for Square/Trafft/Calendly/Fresha. Then PV-3 cleaning vertical. Do not publish any capability claim without a label.",
+  "session_protocol": "Read knowledge.md first. Update this file, backlog, logs at session end. The system is session-autonomous (human-started Freebuff sessions); do not describe it as running 24/7."
 }

@@ -16,7 +16,7 @@ Deploy from branch → main → /site folder or via Actions). You confirm the Pa
 
 ## 2. Register affiliate programs — INSTANT ones first (no application, no waiting)
 Use your real identity and the live site URL
-(`https://wiliamrobertsson76-png.github.io/newsletterstack/`). Never state fake traffic numbers.
+(`https://wiliamrobertsson76-png.github.io/solobookinglab/`). Never state fake traffic numbers.
 
 **Spår A — direkt (5–10 min totalt, ID direkt):**
 | Program | Signup page | Provision | Notes |
@@ -65,9 +65,9 @@ Why: without a verified Search Console property the project cannot see impressio
 CTR — meaning progress and the day-60 kill-check cannot be proven. Takes ~5 minutes.
 
 1. Go to https://search.google.com/search-console and sign in with your Google account.
-2. Choose "URL prefix" and enter: `https://wiliamrobertsson76-png.github.io/newsletterstack/`
+2. Choose "URL prefix" and enter: `https://wiliamrobertsson76-png.github.io/solobookinglab/`
 3. Pick the "HTML file" verification method. Google gives you a file named like
-   `google1234567890abcdef.html`.
+   `google1234567890abcdef.html`. NOTE: after GitHub verifies via the HTML-file method on Pages, tell me and I will confirm the file is served before you press Verify.
 4. Save that file and paste its contents here in chat — I will commit it to the site so it is
    served at the exact URL Google requires, then tell you when to press "Verify".
    (Never paste passwords; this file is public and non-secret by design.)

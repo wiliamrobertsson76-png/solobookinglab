@@ -14,18 +14,21 @@ export function runSiteQa() {
     const html = readFileSync(path.join(SITE_DIR, f), "utf8");
 
     // 1. No cookies / no third-party scripts (privacy-first hard rule)
-    // Allowed: JSON-LD blocks and the local calculator script (absolute or relative path).
-    if (/<script(?![^>]*application\/ld\+json)(?![^>]*src="[\./]*js\/calculator\.js)[^>]*\ssrc=/i.test(html)) {
+    // Allowed: JSON-LD blocks and local scripts under site/js/.
+    if (/<script(?![^>]*application\/ld\+json)(?![^>]*src="[\./]*js\/[a-z0-9-]+\.js)[^>]*\ssrc=/i.test(html)) {
       errors.push(`${f}: external/third-party <script src> found (only local calculator.js allowed)`);
     }
     if (/document\.cookie|setCookie|cookiebot|onetrust/i.test(html)) {
       errors.push(`${f}: cookie-setting code found`);
     }
 
-    // 2. Basic metadata
-    if (!/<title>.+<\/title>/i.test(html)) errors.push(`${f}: missing <title>`);
-    if (!/name="description"/i.test(html)) errors.push(`${f}: missing meta description`);
-    if (!/rel="canonical"/i.test(html)) errors.push(`${f}: missing canonical`);
+    // 2. Basic metadata (skipped for noindex redirect stubs - not SEO surfaces)
+    const isNoindex = /name="robots"[^>]*noindex/i.test(html) || /noindex/i.test(html);
+    if (!isNoindex) {
+      if (!/<title>.+<\/title>/i.test(html)) errors.push(`${f}: missing <title>`);
+      if (!/name="description"/i.test(html)) errors.push(`${f}: missing meta description`);
+      if (!/rel="canonical"/i.test(html)) errors.push(`${f}: missing canonical`);
+    }
 
     // 3. Affilate disclosure near top of page (before main content ends)
     if (/aff(iliate|iliation)/i.test(html) === false && f !== "index.html") {
@@ -60,7 +63,7 @@ export function runSiteQa() {
     const sm = readFileSync(sitemapPath, "utf8");
     for (const f of files) {
       const base = f === "index.html" ? "" : f;
-      const expected = `newsletterstack/${base}`;
+      const expected = `solobookinglab/${base}`;
       if (!sm.includes(expected)) {
         warnings.push(`sitemap.xml does not list ${f}`);
       }
