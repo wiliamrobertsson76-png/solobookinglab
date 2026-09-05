@@ -1,66 +1,61 @@
-/* NewsletterStack calculator.
- * Data below is from primary pricing/affiliate pages, each entry carries the date it was
- * verified. Update ONLY via state/link-registry.json + re-verification, never by hand here
- * without changing the verified date.
+/* NewsletterStack platform cost calculator.
+ * Answers ONE visitor question: "What does each newsletter platform cost at my list size?"
+ * Affiliate economics are deliberately NOT modelled here (they answer a different question for
+ * a different audience - publishers, not creators; see method.html for the policy).
+ *
+ * Data rules: every number below comes from the vendor's own pricing page, with the date it
+ * was verified, recorded in state/link-registry.json. Update ONLY via that registry plus a new
+ * verification date. Approximations (slider-priced vendors) are marked as such, never shown as
+ * exact. If a list size is beyond the tiers we verified, we say so instead of guessing.
  */
+const DATA_VERIFIED = "2026-09-04";
+
 const PLATFORMS = {
   kit: {
     name: "Kit",
+    url: "https://kit.com/pricing",
     freeLimitSubs: 10000,
+    freeNote: "free up to 10,000 subscribers (1 email sequence, limited automations)",
     paidTiers: [
-      { upToSubs: 1000, monthlyUsd: 33, note: "Creator, billed annually" },
-      { upToSubs: 10000, monthlyUsd: 66, note: "Pro, billed annually" }
+      { upToSubs: 1000, monthlyUsd: 33, note: "Creator plan, billed annually" },
+      { upToSubs: 10000, monthlyUsd: 66, note: "Pro plan, billed annually" }
     ],
-    affiliate: {
-      commission: "50% of referred payments, first 12 months",
-      yearOnePct: 0.5,
-      recurringAfterYearOne: "10-20% with status tier"
-    }
+    pricingNote: "Paid prices are annual-billing rates for round subscriber counts; exact price is quoted by subscriber count on the vendor's slider."
   },
   beehiiv: {
     name: "beehiiv",
+    url: "https://www.beehiiv.com/pricing",
     freeLimitSubs: 2500,
+    freeNote: "Launch plan: free up to 2,500 subscribers (unlimited sends, limited features)",
     paidTiers: [
-      { upToSubs: 2500, monthlyUsd: 43, note: "Scale, billed annually" },
-      { upToSubs: 100000, monthlyUsd: 96, note: "Max, billed annually" }
+      { upToSubs: 2500, monthlyUsd: 43, note: "Scale plan, billed annually" },
+      { upToSubs: 100000, monthlyUsd: 96, note: "Max plan, billed annually" }
     ],
-    affiliate: {
-      commission: "50% of referred revenue year one (Bronze)",
-      yearOnePct: 0.5,
-      recurringAfterYearOne: "55-60% at higher tiers"
-    }
+    pricingNote: "Paid prices are annual-billing rates; Scale price shown at 2,500 subscribers on the vendor's calculator."
   },
   mailerlite: {
     name: "MailerLite",
+    url: "https://www.mailerlite.com/pricing",
     freeLimitSubs: 250,
+    freeNote: "free up to 250 subscribers (1,000 emails/month)",
     paidTiers: [
-      { upToSubs: 1000, monthlyUsd: 10, note: "Comfort tier approx. (slider pricing)" },
-      { upToSubs: 10000, monthlyUsd: 20, note: "approx., tiered by list size" }
+      { upToSubs: 1000, monthlyUsd: 10, note: "approx., Growing Business, billed annually" },
+      { upToSubs: 10000, monthlyUsd: 20, note: "approx., tiered by subscriber count" }
     ],
-    affiliate: {
-      commission: "30% lifetime recurring",
-      yearOnePct: 0.3,
-      recurringAfterYearOne: "30% lifetime"
-    },
-    pricingNote: "MailerLite uses subscriber-count slider pricing; values here are approximations for 1k/10k lists - verify at mailerlite.com/pricing before publishing decisions."
+    pricingNote: "Approximate values: MailerLite uses subscriber-slider pricing, so cost varies with your exact count. Verify on the vendor's page before deciding."
   },
   systeme_io: {
     name: "Systeme.io",
+    url: "https://systeme.io/pricing",
     freeLimitSubs: 2000,
+    freeNote: "free plan up to 2,000 contacts (limited emails and funnels)",
     paidTiers: [
-      { upToSubs: 5000, monthlyUsd: 17, note: "Startup" },
-      { upToSubs: 999999, monthlyUsd: 97, note: "Unlimited" }
+      { upToSubs: 5000, monthlyUsd: 17, note: "Startup plan" },
+      { upToSubs: 999999, monthlyUsd: 97, note: "Unlimited plan" }
     ],
-    affiliate: {
-      commission: "60% lifetime recurring",
-      yearOnePct: 0.6,
-      recurringAfterYearOne: "60% lifetime"
-    },
-    pricingNote: "Free plan limits approx. per systeme.io marketing pages - verify before publishing decisions."
+    pricingNote: "Free-plan limits are per vendor marketing pages; confirm limits on the pricing page before relying on them."
   }
 };
-
-const DATA_VERIFIED = "2026-09-04";
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({
@@ -72,49 +67,41 @@ function fmtUsd(n) {
   return "$" + n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 }
 
+/* Returns { usd: number|null, plan: string, approx: bool, free: bool }
+ * usd === null means: beyond the tiers we have verified - we do NOT guess a price. */
 function monthlyCost(p, subs) {
-  if (subs <= p.freeLimitSubs) return { usd: 0, plan: "Free plan" };
+  if (subs <= p.freeLimitSubs) return { usd: 0, plan: "Free plan", approx: false, free: true };
   for (const t of p.paidTiers) {
-    if (subs <= t.upToSubs) return { usd: t.monthlyUsd, plan: t.note };
+    if (subs <= t.upToSubs) return { usd: t.monthlyUsd, plan: t.note, approx: /approx/.test(t.note), free: false };
   }
-  return { usd: null, plan: "Above covered tiers - check pricing page" };
+  return { usd: null, plan: "Beyond verified tiers", approx: false, free: false };
 }
 
 function render() {
   const subs = Math.max(0, parseInt(document.getElementById("subs").value, 10) || 0);
-  const pct = Math.min(2.5, Math.max(0, (parseFloat(document.getElementById("ctr").value) || 0) / 100));
-  const convPct = Math.min(50, Math.max(0, (parseFloat(document.getElementById("conv").value) || 0) / 100));
-  const orderUsd = Math.max(0, parseFloat(document.getElementById("order").value) || 0);
 
-  const rows = Object.entries(PLATFORMS).map(([id, p]) => {
-    const cost = monthlyCost(p, subs);
-    // Expected monthly affiliate earnings per 1,000 referred visits (assumption-driven model):
-    // visits -> clicks (ctr) -> conversions (convPct of clicks) -> order value * commission pct
-    const clicksPer1k = 1000 * pct;
-    const conversions = clicksPer1k * convPct;
-    // Assume referred customers pay a platform monthly price equal to the cost tier for this list size
-    const basePrice = cost.usd === null ? 33 : cost.usd;
-    const earn = conversions * basePrice * p.affiliate.yearOnePct;
-    return { id, p, cost, clicksPer1k, conversions, earn };
-  });
+  const rows = Object.values(PLATFORMS).map((p) => ({ p, cost: monthlyCost(p, subs) }));
 
-  const head = "<tr><th>Platform</th><th class=\"num\">Your monthly cost</th><th>Plan</th>" +
-    "<th class=\"num\">Est. monthly affiliate earnings per 1,000 referred visits</th></tr>";
-  const body = rows.map((r) => {
-    const costTxt = r.cost.usd === null ? "n/a" : (r.cost.usd === 0 ? "$0" : fmtUsd(r.cost.usd));
-    const earnTxt = "$" + r.earn.toLocaleString("en-US", { maximumFractionDigits: 0 });
-    return "<tr><td>" + esc(r.p.name) + "</td><td class=\"num\">" + costTxt +
-      "</td><td>" + esc(r.cost.plan) + "</td><td class=\"num\">" + earnTxt + "</td></tr>";
+  const head = "<tr><th>Platform</th><th class=\"num\">Est. cost / month</th><th>Plan at " +
+    subs.toLocaleString("en-US") + " subscribers</th><th>Free plan includes</th></tr>";
+
+  const body = rows.map(({ p, cost }) => {
+    let costTxt;
+    if (cost.free) costTxt = "$0";
+    else if (cost.usd === null) costTxt = "<a href=\"" + p.url + "\" rel=\"nofollow\">not verified this high - check vendor</a>";
+    else costTxt = (cost.approx ? "~" : "") + fmtUsd(cost.usd) + (cost.approx ? " (approx.)" : "");
+    return "<tr><td>" + esc(p.name) + "</td><td class=\"num\">" + costTxt +
+      "</td><td>" + esc(cost.plan) + "</td><td>" + esc(p.freeNote) + "</td></tr>";
   }).join("");
 
   document.getElementById("out").innerHTML =
     "<table>" + head + body + "</table>" +
-    "<p class=\"note\">Assumptions (edit inputs to change them): " + (pct * 100).toFixed(1) +
-    "% of referred visits click an affiliate link, " + (convPct * 100).toFixed(1) +
-    "% of clicks convert to a paid plan at roughly this tier's monthly price. Earnings shown are " +
-    "commission on first-year revenue. This is a model, not a forecast.</p>" +
-    "<p class=\"note\">Pricing and commission data verified " + DATA_VERIFIED +
-    " from vendor primary pages. Sources on the <a href=\"/method.html\">method page</a>.</p>";
+    "<p class=\"note\">Reading the result: \"$0\" means this list still fits the platform's free plan. " +
+    "Prices marked approx. are approximations because the vendor prices by exact subscriber count. " +
+    "Paid prices are annual-billing rates; paying monthly usually costs more.</p>" +
+    "<p class=\"note\">Data verified " + DATA_VERIFIED + " from each vendor's own pricing page. " +
+    "Vendors change prices without notice - confirm on the vendor's page before deciding. " +
+    "Method, source list and how to dispute a number: <a href=\"method.html\">editorial method</a>.</p>";
 
   document.getElementById("out").setAttribute("data-computed", "true");
   document.getElementById("out").setAttribute("role", "region");
@@ -122,8 +109,8 @@ function render() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  ["subs", "ctr", "conv", "order"].forEach((id) => {
-    document.getElementById(id).addEventListener("input", render);
-  });
+  const subs = document.getElementById("subs");
+  if (!subs) return; // page without the input: nothing to do, no crash
+  subs.addEventListener("input", render);
   render();
 });

@@ -3,7 +3,8 @@
 import { test, mock } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
+import vm from "node:vm";
+import { mkdtempSync, writeFileSync, mkdirSync, rmSync, existsSync, readdirSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -83,6 +84,70 @@ await run("site: QA passes on shipped pages", async () => {
   const res = runSiteQa();
   assert.equal(res.ok, true, `site QA failed: ${res.errors.join("; ")}`);
   assert.ok(res.checked >= 6, "should check at least 6 pages");
+});
+
+// ---------- calculator interaction (regression: 2026-09-05 live crash, missing #order) ----------
+await run("calculator: interaction test - binds only existing inputs, renders, updates on input", async () => {
+  const html = readFileSync(path.join(ENGINE_ROOT, "site", "calculator.html"), "utf8");
+  const js = readFileSync(path.join(ENGINE_ROOT, "site", "js", "calculator.js"), "utf8");
+
+  // Regression 1: every id the script binds must exist as a static id in the page.
+  const boundIds = [...js.matchAll(/getElementById\("([^"]+)"\)/g)].map((m) => m[1]);
+  const staticIds = [...html.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
+  for (const id of new Set(boundIds)) {
+    assert.ok(staticIds.includes(id), `calculator.html must contain id="${id}" (script binds it)`);
+  }
+
+  // Regression 2: run the real script against an emulated DOM; it must render and react.
+  const elements = new Map();
+  for (const id of staticIds) {
+    elements.set(id, {
+      value: id === "subs" ? "1000" : "",
+      innerHTML: "",
+      attrs: {},
+      listeners: {},
+      setAttribute(k, v) { this.attrs[k] = v; },
+      addEventListener(ev, fn) { this.listeners[ev] = fn; }
+    });
+  }
+  const docListeners = {};
+  const document = {
+    getElementById: (id) => elements.get(id) || null,
+    addEventListener: (ev, fn) => { docListeners[ev] = fn; }
+  };
+  new vm.Script(js, { filename: "calculator.js" }).runInNewContext({ document });
+  assert.ok(docListeners.DOMContentLoaded, "script must register a DOMContentLoaded handler");
+  docListeners.DOMContentLoaded(); // any missing id here means the old crash class is back
+
+  const out = elements.get("out");
+  assert.match(out.innerHTML, /<table>/, "render() must produce the results table on load");
+  assert.match(out.innerHTML, /\$0/, "1000 subs must show at least one free-plan $0");
+  assert.equal(out.attrs["data-computed"], "true");
+
+  // 30,000 subs: Kit and MailerLite are beyond verified tiers -> must say so, not guess a price
+  elements.get("subs").value = "30000";
+  elements.get("subs").listeners.input();
+  assert.match(out.innerHTML, /not verified this high/, "beyond-tier rows must refuse to guess");
+  assert.match(out.innerHTML, /\$96/, "beehiiv Max tier at 30k subs must show $96");
+
+  // Regression 3: a page missing #subs entirely must not crash on load.
+  const bareDoc = { getElementById: () => null, addEventListener: () => {} };
+  new vm.Script(js, { filename: "calculator.js" }).runInNewContext({ document: bareDoc });
+});
+
+// ---------- base-path safety (regression: GitHub Pages serves under /newsletterstack/) ----------
+await run("site: no root-relative href/src anywhere (GitHub Pages project base path)", async () => {
+  const siteDir = path.join(ENGINE_ROOT, "site");
+  const files = readdirSync(siteDir).filter((f) => f.endsWith(".html"));
+  const offenders = [];
+  const scan = (name, content) => {
+    for (const m of content.matchAll(/(?:href|src)="\/([^"/]*)"/g)) {
+      offenders.push(`${name}: root-relative "/${m[1]}" breaks under /newsletterstack/ base path`);
+    }
+  };
+  for (const f of files) scan(f, readFileSync(path.join(siteDir, f), "utf8"));
+  scan("js/calculator.js", readFileSync(path.join(siteDir, "js", "calculator.js"), "utf8"));
+  assert.deepEqual(offenders, []);
 });
 
 // ---------- full driftmotor dry run ----------

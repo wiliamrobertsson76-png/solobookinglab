@@ -2,16 +2,16 @@
   "project": "NewsletterStack (autonom-affiliate)",
   "owner": "William Robertsson",
   "updated": "2026-09-04",
-  "phase": "awaiting-human-setup + content-production",
-  "niche": "newsletter/email platform choice, migration and monetization for creators",
+  "phase": "recovery-validation (2026-09-05): repair live defects, re-validate niche, then measurement",
+  "niche": "newsletter/email platform choice, migration and monetization for creators (under re-validation as of 2026-09-05)",
   "verified_state": {
     "tests": "4/4 passing (node engine/tests/run-all.mjs)",
     "driftmotor": "runs green locally; queue idempotent; kill switch verified",
-    "site": "7 pages + calculator built locally; site QA passes; NOT deployed",
+    "site": "LIVE (all pages 200 on 2026-09-04) but calculator main flow BROKEN live - fix and live interaction re-test in progress 2026-09-05",
     "affiliate_links_live": 0
   },
   "site": {
-    "status": "LIVE and verified 2026-09-04 (all 10 pages return 200)",
+    "status": "LIVE and verified 200 on all pages 2026-09-04; known live defects found 2026-09-05 being repaired (see logs/session-2026-09-05.md)",
     "deploy_target": "https://wiliamrobertsson76-png.github.io/newsletterstack/",
     "deploy_url": "https://wiliamrobertsson76-png.github.io/newsletterstack/",
     "deployment_mode": "fully automated: deploy-site workflow publishes site/ on every push to main; zero manual publishing steps",
@@ -49,6 +49,6 @@
       "needed_from_william": "Explicit approval or 'skip - use github.io'"
     }
   ],
-  "next_exact_run_point": "Top unblocked task: BL-3 (draft the 3 launch articles from registry data, pass content gate). Then BL-4, BL-5. Do not re-plan; verify with 'node engine/tests/run-all.mjs' after changes. After William confirms Pages: validate live site + recheck Systeme.io test link.",
+  "next_exact_run_point": "Fas 1 recovery: finish defect fixes, run browser-emulation interaction tests, deploy, verify LIVE calculator main flow, then proceed to niche re-validation (Fas 2-3) and measurement plan (Fas 4). Do not resume article production until go/no-go gate is decided.",
   "session_protocol": "Read knowledge.md first. Update this file, backlog, logs at session end."
 }

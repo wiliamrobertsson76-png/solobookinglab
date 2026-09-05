@@ -62,7 +62,8 @@ const ALLOWED_OUTBOUND = [
   "pabbly.com",
   "selzy.com",
   "www.notion.com",
-  "notion.com"
+  "notion.com",
+  "github.com"
 ];
 
 export function validateOutboundUrl(urlStr) {
