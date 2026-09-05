@@ -58,3 +58,30 @@ say so explicitly with the amount; the agent will prepare everything except the 
 ## 5. Kill switch
 To instantly stop all automation: create an empty file `state/KILL` in the repo (or ask the agent).
 Delete it to resume. See `state/KILL.example`.
+
+## 6. Verify Google Search Console (blocker B4 — needed to measure anything)
+
+Why: without a verified Search Console property the project cannot see impressions, clicks or
+CTR — meaning progress and the day-60 kill-check cannot be proven. Takes ~5 minutes.
+
+1. Go to https://search.google.com/search-console and sign in with your Google account.
+2. Choose "URL prefix" and enter: `https://wiliamrobertsson76-png.github.io/newsletterstack/`
+3. Pick the "HTML file" verification method. Google gives you a file named like
+   `google1234567890abcdef.html`.
+4. Save that file and paste its contents here in chat — I will commit it to the site so it is
+   served at the exact URL Google requires, then tell you when to press "Verify".
+   (Never paste passwords; this file is public and non-secret by design.)
+5. Optional but recommended: repeat the same steps at https://www.bing.com/webmasters
+   (it can import the Google property in one click).
+
+## 7. Create two free test accounts (blocker B5 — for honest migration testing)
+
+Why: the migration-risk guide must be based on real, documented tests — never vendor text.
+
+1. Create a free account at https://kit.com (free up to 10,000 subscribers).
+2. Create a free account at https://www.beehiiv.com (Launch plan, free up to 2,500 subscribers).
+3. Use your real details (the platforms require it). Do NOT share passwords or recovery codes
+   here — instead paste: the workspace/publication URL of each and a chosen test handle, e.g.
+   "kit account: newsletterstack-test".
+4. Tell me when both exist. I will then hand you the exact 30-minute test protocol to run in
+   each (or the parts I can drive), and the guide gets published only with those test dates.
