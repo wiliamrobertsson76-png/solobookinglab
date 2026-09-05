@@ -82,3 +82,17 @@
 {"ts":"2026-09-04T17:08:10.955Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (20ms)"}
 {"ts":"2026-09-04T17:08:10.961Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (2ms)"}
 {"ts":"2026-09-04T17:08:10.969Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (3ms)"}
+{"ts":"2026-09-05T04:29:31.843Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T04:29:31.850Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-05T04:29:31.891Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T04:29:31.891Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (1ms)"}
+{"ts":"2026-09-05T04:29:31.895Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-05T04:29:31.895Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (3ms)"}
+{"ts":"2026-09-05T04:29:31.897Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (1ms)"}
+{"ts":"2026-09-05T04:29:31.897Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (0ms)"}
+{"ts":"2026-09-05T04:29:31.944Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-09-05T04:29:31.946Z","jobId":"check-links","level":"INFO","message":"registry and source URLs OK (3ms)"}
+{"ts":"2026-09-05T04:29:31.949Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-09-05T04:29:31.949Z","jobId":"site-qa","level":"INFO","message":"site QA OK (7 pages, 1 warnings) (2ms)"}
+{"ts":"2026-09-05T04:29:31.950Z","jobId":"kpi-snapshot","level":"INFO","message":"KPI snapshot appended (0ms)"}
+{"ts":"2026-09-05T04:29:31.951Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (0ms)"}
