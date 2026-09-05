@@ -2,7 +2,7 @@
   "project": "SoloBookingLab (pivot from NewsletterStack, owner decision 2026-09-05)",
   "owner": "William Robertsson",
   "updated": "2026-09-05",
-  "phase": "pivot-executed: new MVP live after deploy; next = capability verification (PV-1/PV-2) + human registrations (B2)",
+  "phase": "affiliate applications DONE via browser automation (SimplyBook.me pending approval, Jotform submitted, Formaloo submitted); next = PV-1/PV-2 capability verification + test accounts (B5) + approval emails",
   "positioning": "Booking, client intake, deposits and reminders for solo and mobile service businesses. Audiences phase 1: mobile dog groomers, mobile car detailers, solo cleaners, driving instructors.",
   "customer_job": "What booking stack should I use so clients can choose a time, provide their address and job details, pay a deposit, receive reminders, and avoid no-shows - without paying for unnecessary team features?",
   "niche_history": "newsletter niche ARCHIVED 2026-09-05 (see docs/NICHE_VALIDATION_2026-09-05.md + decisions.jsonl); no further newsletter content will be published",
@@ -35,11 +35,11 @@
       "id": "B2",
       "title": "Register affiliate programs in the owner-mandated order",
       "why": "Identity-bound signups must be human; IDs enable attribution and revenue",
-      "needed_from_william": "1) simplybook.me/en/affiliate-program (instant) 2) jotform.com/partnership/affiliate + formaloo.com/affiliate-program 3) later Trafft. Paste public IDs/links back here; verify terms shown at signup match our registry"
+      "needed_from_william": "ALL THREE NOW APPLIED (2026-09-05, via Playwright browser automation): SimplyBook.me = pending approval (your existing account), Jotform = submitted (confirm your 'thank you for signing up' email is the affiliate application), Formaloo = submitted. WHEN APPROVAL EMAILS ARRIVE: paste the affiliate ID/link from each dashboard here. Remaining manual: Trafft later (quality gate), Make/Pabbly for automation guides"
     },
     {
       "id": "B5",
-      "title": "Create test accounts for own-product tests (SimplyBook.me first, then Square Appointments, Trafft)",
+      "title": "Create test accounts for own-product tests (SimplyBook.me exists; next Square Appointments, then Trafft) - agent can prefill via browser now",
       "why": "The 9-step protocol needs real accounts; creation is identity-bound",
       "needed_from_william": "Create free accounts with your real details; share only workspace URLs/test handles, never passwords"
     },

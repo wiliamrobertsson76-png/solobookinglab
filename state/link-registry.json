@@ -12,11 +12,12 @@
       "pricing_summary": "Free 50 bookings/mo 1 custom feature; Basic EUR 13.9/mo 100 bookings; Standard EUR 29.9/mo 500; Premium EUR 59.9/mo 2000 [vendor 2026-09-05]",
       "affiliate": {
         "available": true,
-        "status": "instant-access per program page [vendor 2026-09-05]",
+        "status": "APPLIED 2026-09-05: owner account exists, dashboard shows 'Your Account Is Currently Pending Approval'; marketing materials/links only after written approval email",
         "terms": "25% of first payment + 15% of subsequent payments up to 24 months [vendor 2026-09-05]",
         "signup_url": "https://simplybook.me/en/affiliate-program",
         "tracking_id": null,
-        "registered": false
+        "registered": true,
+        "applied_date": "2026-09-05"
       },
       "own_test": "not tested yet"
     },
@@ -85,11 +86,12 @@
       "pricing_verified": "not yet fetched",
       "affiliate": {
         "available": true,
-        "status": "program page verified 2026-09-05",
+        "status": "APPLIED 2026-09-05: application form submitted via official page (name/website/audience/promotion checkboxes); owner received signup-confirmation email - TO VERIFY email refers to the affiliate application specifically; do NOT re-submit (duplicate risk)",
         "terms": "30% on every new paid user; one-year recurring per vendor blog; 60d cookie per third-party [vendor+third-party 2026-09-05]",
         "signup_url": "https://www.jotform.com/partnership/affiliate/",
         "tracking_id": null,
-        "registered": false
+        "registered": true,
+        "applied_date": "2026-09-05"
       },
       "own_test": "not tested yet"
     },
@@ -101,11 +103,12 @@
       "pricing_verified": "not yet fetched",
       "affiliate": {
         "available": true,
-        "status": "program page verified 2026-09-05",
+        "status": "APPLIED 2026-09-05: full application submitted via official formaloo.me/partners form (company, contact, email, phone +46 736318077, website, details); submission confirmed by redirect with prefilled data; no captcha/password required; awaiting approval",
         "terms": "25-40% lifetime [vendor 2026-09-05]",
         "signup_url": "https://www.formaloo.com/affiliate-program",
         "tracking_id": null,
-        "registered": false
+        "registered": true,
+        "applied_date": "2026-09-05"
       },
       "own_test": "not tested yet"
     },
