@@ -43,3 +43,11 @@
 {"ts":"2026-09-05T04:29:31.950Z","kpi":"registry_programs_tracked","value":9}
 {"ts":"2026-09-05T04:29:31.950Z","kpi":"programs_live","value":0}
 {"ts":"2026-09-05T04:29:31.950Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "live_defects_open", "value": 0, "note": "12 verified defects 2026-09-05 all fixed; live main flow re-verified 24/24 checks"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "affiliate_clicks", "value": 0, "note": "still 0 outbound affiliate links live (truth)"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "revenue_sek", "value": 0, "note": "still 0; project remains an experiment per success definition"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "cost_sek", "value": 0, "note": "hard budget rule"}
+{"ts": "2026-09-05T00:00:00Z", "kpi": "bottom_funnel_queries_serp_checked", "value": 3, "note": "gate item 2 requires >=20; BL-6 in progress"}
+{"ts":"2026-09-05T09:18:19.246Z","kpi":"registry_programs_tracked","value":9}
+{"ts":"2026-09-05T09:18:19.247Z","kpi":"programs_live","value":0}
+{"ts":"2026-09-05T09:18:19.249Z","kpi":"cost_sek","value":0,"note":"hard budget rule"}

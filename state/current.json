@@ -2,7 +2,7 @@
   "project": "NewsletterStack (autonom-affiliate)",
   "owner": "William Robertsson",
   "updated": "2026-09-04",
-  "phase": "recovery-validation (2026-09-05): repair live defects, re-validate niche, then measurement",
+  "phase": "niche-revalidated SMALNA AV (2026-09-05); content freeze until gate items 2+3 close; next = BL-6 SERP checks + BL-7 competitor matrix",
   "niche": "newsletter/email platform choice, migration and monetization for creators (under re-validation as of 2026-09-05)",
   "verified_state": {
     "tests": "4/4 passing (node engine/tests/run-all.mjs)",
@@ -31,16 +31,22 @@
   },
   "human_blockers": [
     {
-      "id": "B1",
-      "title": "(none - setup fully automated via API 2026-09-04)",
-      "why": "",
-      "needed_from_william": "nothing"
+      "id": "B4",
+      "title": "Verify Google Search Console (+ Bing Webmaster) for the site",
+      "why": "Funnel measurement (impressions/clicks/CTR) requires verified property; without it the project cannot prove progress or run kill-checks",
+      "needed_from_william": "Follow docs/INSTALL_CHECKLIST.md section 4 (DNS TXT via GitHub Pages settings or HTML file upload through repo invite)"
     },
     {
       "id": "B2",
-      "title": "Register affiliate programs AFTER site is live (checklist item 2)",
-      "why": "Tracking IDs required before any affiliate link goes live; applications must be truthful and human-made",
-      "needed_from_william": "Tracking IDs (not secret; can be shared in chat) or secret NAMES for real secrets"
+      "title": "Register the 5 instant-access affiliate programs (5-10 min total)",
+      "why": "Identity-bound signups must be human; IDs enable the revenue chain and sub-ID click tracking",
+      "needed_from_william": "GetResponse, AWeber, Pabbly, Selzy signups (Systeme.io already done); paste tracking IDs (not secret) here"
+    },
+    {
+      "id": "B5",
+      "title": "Create 2 free-plan test accounts (Kit, beehiiv) for documented migration testing",
+      "why": "Migration-risk guide must be based on real tested accounts, and account creation is identity-bound",
+      "needed_from_william": "Create accounts with your real details; share only workspace URLs/test handles, never passwords"
     },
     {
       "id": "B3",
@@ -49,6 +55,6 @@
       "needed_from_william": "Explicit approval or 'skip - use github.io'"
     }
   ],
-  "next_exact_run_point": "Fas 1 recovery: finish defect fixes, run browser-emulation interaction tests, deploy, verify LIVE calculator main flow, then proceed to niche re-validation (Fas 2-3) and measurement plan (Fas 4). Do not resume article production until go/no-go gate is decided.",
+  "next_exact_run_point": "BL-6: SERP-check the remaining 17 bottom-funnel questions (update niche-matrix json). Then BL-7 competitor matrix for the break-even calculator. Content production stays frozen until both pass. See docs/NICHE_VALIDATION_2026-09-05.md.",
   "session_protocol": "Read knowledge.md first. Update this file, backlog, logs at session end."
 }

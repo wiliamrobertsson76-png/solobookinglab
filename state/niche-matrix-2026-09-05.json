@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-05",
+  "method": "15 candidates scored 0-10 per criterion, weighted per correction prompt. No sunk-cost weight for existing site. Evidence: [P]=primary source or live SERP fetched 2026-09-05, [X]=proxy (SERP composition/related searches), [A]=assumption. No search volume/CPC/KD claimed.",
+  "weights": {
+    "T_time_to_usable_link": 0.20,
+    "E_documented_demand_serp_openings": 0.20,
+    "K_real_commission_economics": 0.15,
+    "U_defensible_unique_asset": 0.15,
+    "I_credible_content_production": 0.10,
+    "D_non_google_distribution": 0.10,
+    "R_low_legal_platform_risk": 0.05,
+    "F_facts_auto_freshness": 0.05
+  },
+  "candidates": [
+    {"id": 1, "name": "Newsletter platform cost & switching (current, NARROWED to 500-25k subs)", "scores": {"T": 7, "E": 8, "K": 8, "U": 6, "I": 7, "D": 6, "R": 8, "F": 7}, "total": 7.0, "evidence": "5 instant-access programs verified [P 2026-09-04]; cost-query SERPs hold independent+Reddit spots [X 2026-09-05]; gate items 2 and 6 partial -> content blocked until closed", "kill_reason": null},
+    {"id": 2, "name": "Invoice/accounting for freelancers (FreshBooks $5-10/trial + up to $200/paid via PartnerStack; Bonsai)", "scores": {"T": 4, "E": 8, "K": 9, "U": 4, "I": 5, "D": 5, "R": 7, "F": 6}, "total": 6.0, "evidence": "FreshBooks program page + terms [P 2026-09-05]; approval friction [P]; vendor 'alternatives' pages own head SERPs [P: hellobonsai.com/alternatives/freshbooks]", "kill_reason": "approval friction + vendor-owned SERPs"},
+    {"id": 3, "name": "Course platforms (Thinkific 30% lifetime [P 2026-09-04], Teachable)", "scores": {"T": 5, "E": 6, "K": 7, "U": 5, "I": 6, "D": 5, "R": 7, "F": 6}, "total": 5.9, "evidence": "terms [P 2026-09-04]", "kill_reason": "audience credibility gap; entrenched listicles"},
+    {"id": 4, "name": "Project management SaaS (ClickUp up to $25/signup + tiers)", "scores": {"T": 4, "E": 7, "K": 6, "U": 4, "I": 6, "D": 5, "R": 7, "F": 6}, "total": 5.85, "evidence": "PartnerStack application WITH approval step [P: help.clickup.com 'Once approved...']", "kill_reason": "approval-gated + vendor SERP ownership"},
+    {"id": 5, "name": "AI writing tools", "scores": {"T": 5, "E": 6, "K": 5, "U": 5, "I": 6, "D": 5, "R": 6, "F": 5}, "total": 5.45, "evidence": "[P 2026-09-04 pricing], churn risk [A]", "kill_reason": "expensive plans -> churn; claims hard to verify honestly"},
+    {"id": 6, "name": "Email/SMB broad (Brevo, ActiveCampaign)", "scores": {"T": 4, "E": 6, "K": 6, "U": 3, "I": 5, "D": 4, "R": 6, "F": 5}, "total": 4.75, "evidence": "program terms NOT primary-verified [A]", "kill_reason": "unverified terms; broader = harder"},
+    {"id": 7, "name": "Web hosting for beginners", "scores": {"T": 5, "E": 7, "K": 5, "U": 3, "I": 5, "D": 4, "R": 6, "F": 5}, "total": 5.05, "evidence": "one-time bounties [P 2026-09-04]", "kill_reason": "one-time commissions; brutal competition"},
+    {"id": 8, "name": "No-code builders (Softr/Glide/Bubble)", "scores": {"T": 2, "E": 7, "K": 5, "U": 4, "I": 5, "D": 5, "R": 7, "F": 5}, "total": 4.85, "evidence": "search today found no usable affiliate program pages for Softr/Glide [P-search 2026-09-05]", "kill_reason": "no usable program found"},
+    {"id": 9, "name": "VPN/privacy", "scores": {"T": 4, "E": 6, "K": 5, "U": 3, "I": 5, "D": 4, "R": 5, "F": 5}, "total": 4.7, "evidence": "[P 2026-09-04]", "kill_reason": "trust-heavy, saturated, one-time"},
+    {"id": 10, "name": "Notion/productivity templates", "scores": {"T": 1, "E": 6, "K": 5, "U": 5, "I": 6, "D": 5, "R": 7, "F": 5}, "total": 4.6, "evidence": "Notion affiliate closed [P 2026-09-04]", "kill_reason": "program closed"},
+    {"id": 11, "name": "Resume builders", "scores": {"T": 3, "E": 5, "K": 5, "U": 3, "I": 5, "D": 4, "R": 6, "F": 5}, "total": 4.3, "evidence": "program access unverified [A]", "kill_reason": "unverified programs; seasonal"},
+    {"id": 12, "name": "Website builders for creators", "scores": {"T": 3, "E": 6, "K": 5, "U": 3, "I": 5, "D": 4, "R": 6, "F": 5}, "total": 4.3, "evidence": "program access unverified [A]", "kill_reason": "unverified programs"},
+    {"id": 13, "name": "Language-learning apps", "scores": {"T": 3, "E": 5, "K": 4, "U": 3, "I": 5, "D": 4, "R": 6, "F": 5}, "total": 3.95, "evidence": "programs uncertain [A]", "kill_reason": "uncertain programs; consumer trust needs"},
+    {"id": 14, "name": "Crypto/fintech", "scores": {"T": 2, "E": 5, "K": 6, "U": 2, "I": 2, "D": 3, "R": 1, "F": 3}, "total": 3.05, "evidence": "YMYL", "kill_reason": "YMYL/regulatory - excluded by standard"},
+    {"id": 15, "name": "Health/supplements", "scores": {"T": 2, "E": 5, "K": 5, "U": 2, "I": 2, "D": 3, "R": 1, "F": 3}, "total": 2.95, "evidence": "YMYL", "kill_reason": "YMYL/unverifiable claims - excluded by standard"}
+  ],
+  "serp_checks_done": [
+    {"query": "beehiiv vs kit", "findings": "pos1 independent tester; pos2-3 BOTH vendors' own comparison pages; pos4-5 small blogs; pos7 established comparator; pos8 forum thread", "openings": "tail only for a new site"},
+    {"query": "how much does beehiiv cost 5000 subscribers", "findings": "pos1-2 vendor; pos3-4 independent testers/blogs; pos6 Reddit; beehiiv ships its OWN subscriber-count pricing calculator", "openings": "real non-vendor openings; single-brand calculator NOT defensible"},
+    {"query": "migrate from mailchimp to beehiiv", "findings": "pos1-4 vendor docs/blog; pos5 Reddit; pos6 YouTube", "openings": "independent angle must be cross-platform tested 'what breaks'"}
+  ],
+  "bottom_funnel_queries": {
+    "serp_verified": 3,
+    "candidates_unchecked": 17,
+    "note": "gate item 2 requires >=20 checked; BL-6 blocks all content production until done"
+  },
+  "decision": "SMALNA AV (narrow): cost & switching decisions for independent newsletter creators ~500-25,000 subscribers",
+  "decided_by": "agent per autonomy mandate",
+  "revisit": "2026-12-03 quarterly, or day-60 kill-check if impressions ~ 0"
+}

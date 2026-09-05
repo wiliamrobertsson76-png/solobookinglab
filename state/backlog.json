@@ -1,74 +1,21 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
+  "note": "30-day backlog after bias-free niche re-validation. Decision: SMALNA AV. Every task names the funnel KPI it moves. Gate rule: BL-6 and BL-7 must complete before ANY new content page (BL-3 replaced by gated asset tasks).",
   "tasks": [
-    {
-      "id": "BL-1",
-      "title": "Deploy site to GitHub Pages",
-      "priority": 95,
-      "expected_revenue_impact": "high (prerequisite for everything user-facing)",
-      "risk": "low",
-      "cost_sek": 0,
-      "status": "done",
-      "notes": "LIVE 2026-09-04 at https://wiliamrobertsson76-png.github.io/newsletterstack/ - all 10 pages verified 200; fully automated deploy workflow"
-    },
-    {
-      "id": "BL-2",
-      "title": "Connect affiliate IDs and validate real tracking links",
-      "priority": 90,
-      "expected_revenue_impact": "high (enables monetization)",
-      "risk": "low",
-      "cost_sek": 0,
-      "status": "blocked-by-human",
-      "blocker": "B2",
-      "notes": "validator + registry ready; IDs arrive only after site is live and William registers"
-    },
-    {
-      "id": "BL-3",
-      "title": "Draft 3 launch articles: platform comparison (free tier limits), first-1000-subs cost guide, affiliate-program earning guide",
-      "priority": 85,
-      "expected_revenue_impact": "high",
-      "risk": "low",
-      "cost_sek": 0,
-      "status": "ready",
-      "notes": "use only verified facts from link-registry.json with verified-dates; content gate applies"
-    },
-    {
-      "id": "BL-4",
-      "title": "Build migration checklist pages (Kit<->beehiiv<->MailerLite)",
-      "priority": 70,
-      "expected_revenue_impact": "medium-high (differentiator)",
-      "risk": "low",
-      "cost_sek": 0,
-      "status": "ready"
-    },
-    {
-      "id": "BL-5",
-      "title": "Wire Search Console / Bing Webmaster via approved methods once site is live",
-      "priority": 65,
-      "expected_revenue_impact": "medium (measurement)",
-      "risk": "low",
-      "cost_sek": 0,
-      "status": "blocked-by-human",
-      "blocker": "B1"
-    },
-    {
-      "id": "BL-6",
-      "title": "Quarterly re-verification of all affiliate terms + pricing entries",
-      "priority": 80,
-      "expected_revenue_impact": "protective (compliance)",
-      "risk": "low",
-      "cost_sek": 0,
-      "status": "scheduled",
-      "due": "2026-12-03"
-    },
-    {
-      "id": "BL-8",
-      "title": "Email newsletter (only after documented-consent infrastructure exists)",
-      "priority": 40,
-      "expected_revenue_impact": "medium",
-      "risk": "medium (GDPR consent flows must be built first)",
-      "cost_sek": 0,
-      "status": "deferred"
-    }
+    {"id": "BL-1", "title": "Deploy site to GitHub Pages", "moves_kpi": "indexed_pages", "priority": 95, "cost_sek": 0, "status": "done", "notes": "LIVE 2026-09-04; deploy fully automated"},
+    {"id": "BL-9", "title": "Recovery: fix live calculator crash + regression tests + live flow verification", "moves_kpi": "protects all downstream KPIs", "priority": 98, "cost_sek": 0, "status": "done", "notes": "2026-09-05: 12/12 defects fixed, 6/6 tests, live main flow verified 24/24 checks (scripts/verify-live-flow.mjs)"},
+    {"id": "BL-6", "title": "SERP-check remaining 17 bottom-funnel questions (gate item 2)", "moves_kpi": "validates demand before content spend", "priority": 92, "cost_sek": 0, "status": "ready", "evidence": "3/20 checked 2026-09-05; method: live SERP composition, no paid tools", "verify": "niche-matrix json updated with >=20 checked queries and openings per query"},
+    {"id": "BL-7", "title": "Competitor matrix for asset #2 switch-vs-stay break-even calculator", "moves_kpi": "validates unique-asset claim (gate item 3)", "priority": 88, "cost_sek": 0, "status": "ready", "verify": "matrix doc listing top competitors' coverage; publish only if gap proven"},
+    {"id": "BL-5", "title": "Search Console + Bing Webmaster verification (measurement foundation)", "moves_kpi": "impressions/clicks/CTR observable", "priority": 85, "cost_sek": 0, "status": "blocked-by-human", "blocker": "B4", "notes": "needs William's verification via his GitHub/DNS; exact steps in docs/INSTALL_CHECKLIST.md section 4"},
+    {"id": "BL-10", "title": "Verify per-program sub-ID tracking support in affiliate dashboards (Systeme.io first)", "moves_kpi": "affiliate_clicks per page/CTA observable", "priority": 80, "cost_sek": 0, "status": "blocked-by-human", "blocker": "B2", "notes": "William checks dashboard for sub-ID/utm parameter support; document per program in link-registry"},
+    {"id": "BL-11", "title": "William creates free-plan test accounts (Kit + beehiiv) for documented migration tests", "moves_kpi": "enables tested migration-risk guide (asset #3)", "priority": 75, "cost_sek": 0, "status": "blocked-by-human", "blocker": "B5", "notes": "identity-bound account creation; agent drafts the test protocol meanwhile"},
+    {"id": "BL-12", "title": "Upgrade cost calculator into multi-platform comparison table at 500/1k/2.5k/5k/10k/25k subs", "moves_kpi": "asset #1 quality; time-on-page proxy", "priority": 70, "cost_sek": 0, "status": "ready", "gate": "only after BL-6 shows cost queries still open", "notes": "keeps no-guess rule; date stamps per figure"},
+    {"id": "BL-4", "title": "Migration-risk guide Kit<->beehiiv from documented free-plan tests", "moves_kpi": "unique tested content (gate item 3)", "priority": 65, "cost_sek": 0, "status": "blocked", "depends": ["BL-11", "BL-6"], "notes": "publish only with test dates; never vendor text"},
+    {"id": "BL-2", "title": "Connect remaining affiliate IDs (5 instant programs) and validate links", "moves_kpi": "enables revenue chain", "priority": 60, "cost_sek": 0, "status": "blocked-by-human", "blocker": "B2", "notes": "William signs up (5-10 min total); IDs pasted here; validator gates them"},
+    {"id": "BL-8", "title": "Privacy-first measurement tool evaluation (cookie-less, allows commercial use)", "moves_kpi": "on-site funnel visibility", "priority": 50, "cost_sek": 0, "status": "ready", "gate": " GoatCounter free tier is NON-commercial only [P: docs] -> not eligible as-is; continue search; privacy.html must be updated BEFORE any tool ships", "verify": "tool terms fetched from primary source and logged"},
+    {"id": "BL-13", "title": "Distribution experiment: manual Reddit/community participation plan (rule-respecting, no spam)", "moves_kpi": "gate item 6: non-Google channel proof", "priority": 45, "cost_sek": 0, "status": "ready", "notes": "human-executed participation only; agent prepares which threads/content qualify; measures referral sessions"},
+    {"id": "BL-6b", "title": "Quarterly re-verification of all affiliate terms + pricing entries", "moves_kpi": "protective (compliance)", "priority": 80, "cost_sek": 0, "status": "scheduled", "due": "2026-12-03"},
+    {"id": "BL-3", "title": "REPLACED: old draft-3-articles task (superseded by gated asset tasks BL-12, BL-4, BL-7)", "priority": 0, "status": "obsolete", "notes": "old task would have produced unevaluated content before gate items 2/3 closed"},
+    {"id": "BL-14", "title": "Day-60 kill/hold checkpoint: if GSC impressions ~= 0 and no non-Google channel works, pause content, re-run niche matrix", "moves_kpi": "risk control", "priority": 40, "cost_sek": 0, "status": "scheduled", "due": "2026-11-04"}
   ]
 }
