@@ -966,7 +966,35 @@
       "lastError": "TypeError: Cannot read properties of undefined (reading 'filter')",
       "error": "TypeError: Cannot read properties of undefined (reading 'filter')",
       "diedAt": "2026-10-08T11:26:31.621Z"
+    },
+    {
+      "id": 302,
+      "task": "check-links",
+      "priority": 90,
+      "idempotencyKey": "check-links:2026-10-09",
+      "payload": {},
+      "status": "dead",
+      "attempts": 3,
+      "createdAt": "2026-10-09T11:22:52.444Z",
+      "leasedAt": "2026-10-09T11:22:52.454Z",
+      "lastError": "TypeError: reg.programs is not iterable",
+      "error": "TypeError: reg.programs is not iterable",
+      "diedAt": "2026-10-09T11:22:52.455Z"
+    },
+    {
+      "id": 304,
+      "task": "kpi-snapshot",
+      "priority": 60,
+      "idempotencyKey": "kpi-snapshot:2026-10-09",
+      "payload": {},
+      "status": "dead",
+      "attempts": 3,
+      "createdAt": "2026-10-09T11:22:52.447Z",
+      "leasedAt": "2026-10-09T11:22:52.463Z",
+      "lastError": "TypeError: Cannot read properties of undefined (reading 'filter')",
+      "error": "TypeError: Cannot read properties of undefined (reading 'filter')",
+      "diedAt": "2026-10-09T11:22:52.464Z"
     }
   ],
-  "seq": 301
+  "seq": 308
 }
