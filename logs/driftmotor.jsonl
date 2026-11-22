@@ -1929,3 +1929,26 @@
 {"ts":"2026-11-21T12:46:41.847Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
 {"ts":"2026-11-21T12:46:41.849Z","jobId":"site-qa","level":"INFO","message":"site QA OK (11 pages, 4 warnings) (4ms)"}
 {"ts":"2026-11-21T12:46:41.851Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (0ms)"}
+{"ts":"2026-11-22T12:40:47.207Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-11-22T12:40:47.210Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-11-22T12:40:47.246Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-11-22T12:40:47.247Z","jobId":"check-links","level":"ERROR","message":"reg.programs is not iterable"}
+{"ts":"2026-11-22T12:40:47.248Z","jobId":610,"level":"WARN","message":"job retry scheduled (attempt 1): TypeError: reg.programs is not iterable"}
+{"ts":"2026-11-22T12:40:47.249Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-11-22T12:40:47.250Z","jobId":"check-links","level":"ERROR","message":"reg.programs is not iterable"}
+{"ts":"2026-11-22T12:40:47.250Z","jobId":610,"level":"WARN","message":"job retry scheduled (attempt 2): TypeError: reg.programs is not iterable"}
+{"ts":"2026-11-22T12:40:47.252Z","jobId":"links","level":"INFO","message":"registry OK"}
+{"ts":"2026-11-22T12:40:47.252Z","jobId":"check-links","level":"ERROR","message":"reg.programs is not iterable"}
+{"ts":"2026-11-22T12:40:47.252Z","jobId":610,"level":"ERROR","message":"job dead-lettered: TypeError: reg.programs is not iterable"}
+{"ts":"2026-11-22T12:40:47.256Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-11-22T12:40:47.256Z","jobId":"site-qa","level":"INFO","message":"site QA OK (11 pages, 4 warnings) (2ms)"}
+{"ts":"2026-11-22T12:40:47.258Z","jobId":"kpi-snapshot","level":"ERROR","message":"Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-11-22T12:40:47.259Z","jobId":612,"level":"WARN","message":"job retry scheduled (attempt 1): TypeError: Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-11-22T12:40:47.261Z","jobId":"kpi-snapshot","level":"ERROR","message":"Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-11-22T12:40:47.261Z","jobId":612,"level":"WARN","message":"job retry scheduled (attempt 2): TypeError: Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-11-22T12:40:47.262Z","jobId":"kpi-snapshot","level":"ERROR","message":"Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-11-22T12:40:47.263Z","jobId":612,"level":"ERROR","message":"job dead-lettered: TypeError: Cannot read properties of undefined (reading 'filter')"}
+{"ts":"2026-11-22T12:40:47.264Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (0ms)"}
+{"ts":"2026-11-22T12:40:47.305Z","jobId":"site-qa","level":"INFO","message":"site QA OK"}
+{"ts":"2026-11-22T12:40:47.307Z","jobId":"site-qa","level":"INFO","message":"site QA OK (11 pages, 4 warnings) (4ms)"}
+{"ts":"2026-11-22T12:40:47.309Z","jobId":"heartbeat","level":"INFO","message":"heartbeat written (0ms)"}
